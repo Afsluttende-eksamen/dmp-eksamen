@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Navigation from "./components/layout/Navigation";
+import Hero from "./components/ui/Hero";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen flex flex-col">
       <video
         autoPlay
         loop
@@ -13,8 +13,8 @@ export default function Home() {
         <source src="/videos/dmp-landing-video.mp4" type="video/mp4" />
       </video>
       <Navigation variant="white" />
-      <main>
-      
+      <main className="flex-1 flex items-end justify-center pb-32">
+        <Hero />
       </main>
     </div>
   );
