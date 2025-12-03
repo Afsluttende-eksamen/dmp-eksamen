@@ -3,18 +3,23 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
-const Navigation = () => {
+const Navigation = ({ variant = 'black' }) => {
+  const isWhite = variant === 'white';
+  const textColor = isWhite ? 'text-white' : 'text-black';
+  const logoSrc = isWhite ? '/svg/dmp-logo-white.svg' : '/svg/dmp-logo-black.svg';
+  const hoverTextColor = isWhite ? 'hover:text-black' : 'hover:text-white';
+  const linkClass = `px-6 py-2.5 rounded-xl hover:bg-[#4F649B] ${hoverTextColor} hover:underline transition-all duration-300 ${textColor}`;
+
   return (
     <nav className="py-1">
       <div className=" px-4">
         <div className="flex items-center justify-between">
           {/* Left Links */}
-          <div className="flex gap-12
-          ">
-            <Link href="/merch" className="px-6 py-2.5 rounded-xl hover:bg-[#4F649B] hover:text-white hover:underline transition-all duration-300">
+          <div className="flex gap-12">
+            <Link href="/merch" className={linkClass}>
               MERCH
             </Link>
-            <Link href="/koncerter" className="px-6 py-2.5 rounded-xl hover:bg-[#4F649B] hover:text-white hover:underline transition-all duration-300">
+            <Link href="/koncerter" className={linkClass}>
               KONCERTER
             </Link>
           </div>
@@ -22,7 +27,7 @@ const Navigation = () => {
           <div className="mx-16"> 
             <Link href="/" className="group relative">
               <Image 
-                src="/svg/dmp-logo-black.svg" 
+                src={logoSrc}
                 alt="DMP Logo" 
                 width={78} 
                 height={78}
@@ -40,13 +45,13 @@ const Navigation = () => {
 
           {/* Right Links */}
           <div className="flex gap-12 items-center">
-            <Link href="/om-os" className="px-6 py-2.5 rounded-xl hover:bg-[#4F649B] hover:text-white hover:underline transition-all duration-300">
+            <Link href="/om-os" className={linkClass}>
               OM OS
             </Link>
-            <Link href="/kontakt" className="px-6 py-2.5 rounded-xl hover:bg-[#4F649B] hover:text-white hover:underline transition-all duration-300">
+            <Link href="/kontakt" className={linkClass}>
               KONTAKT
             </Link>
-            <Link href="/kurv">
+            <Link href="/kurv" className={textColor}>
               <FontAwesomeIcon icon={faCartShopping} className="w-6 h-6" />
             </Link>
           </div>

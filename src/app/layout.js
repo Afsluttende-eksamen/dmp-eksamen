@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${archivo.variable} antialiased`}
       >
-        <Navigation />
         {children}
       </body>
     </html>
