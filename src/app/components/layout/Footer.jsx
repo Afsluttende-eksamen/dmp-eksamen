@@ -15,7 +15,6 @@ const Footer = () => {
             </p>
             <div className="flex gap-3 ">
               <Link href="https://www.facebook.com/p/Danser-Med-Piger-100075755391006/?locale=da_DK">
-                {" "}
                 <FaFacebook className="size-8" />
               </Link>
               <Link href="https://www.tiktok.com/@dansermedpiger">
