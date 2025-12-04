@@ -11,9 +11,16 @@ const Footer = () => {
           <h4>Danser Med Piger</h4>
           <p>Dansk disco-pop band der bringer energi og stemning på scenen.</p>
           <div className="flex gap-3 ">
-            <FaFacebook className="size-8" />
-            <FaTiktok className="size-8" />
-            <FaInstagram className="size-8" />
+            <Link href="https://www.facebook.com/p/Danser-Med-Piger-100075755391006/?locale=da_DK">
+              {" "}
+              <FaFacebook className="size-8" />
+            </Link>
+            <Link href="https://www.tiktok.com/@dansermedpiger">
+              <FaTiktok className="size-8" />
+            </Link>
+            <Link href="https://www.instagram.com/dansermedpiger/?hl=da">
+              <FaInstagram className="size-8" />
+            </Link>
           </div>
         </div>
 
