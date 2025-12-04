@@ -1,6 +1,8 @@
 import Navigation from "./components/layout/Navigation";
 import Hero from "./components/ui/Hero";
 
+import Footer from "./components/layout/Footer";
+
 export default function Home() {
   return (
     <div className="relative min-h-screen flex flex-col">
