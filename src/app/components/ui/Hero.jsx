@@ -13,7 +13,7 @@ export default function Hero() {
           className="opacity-50"
         />
       </div>
-      <div className="">
+      <div>
         <Button variant="primary">BOOK VIA UNITED STAGE</Button>
       </div>
     </div>
