@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col">
+          <div className="flex flex-col ">
             <h2>Hurtige links</h2>
             <Link href="/">Forside</Link>
             <Link href="/merch">Merch</Link>
