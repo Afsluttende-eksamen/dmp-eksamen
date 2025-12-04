@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col">
-            <h4>Hurtige links</h4>
+            <h2>Hurtige links</h2>
             <Link className="hover:underline" href="/">
               Forside
             </Link>
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col">
-            <h4>Kontakt & Booking</h4>
+            <h2>Kontakt & Booking</h2>
             <Link
               className="hover:underline"
               href="mailto:mail@dansermedpiger.dk"
