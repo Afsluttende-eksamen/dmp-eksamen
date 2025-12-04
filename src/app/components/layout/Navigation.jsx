@@ -1,7 +1,7 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import Link from "next/link";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Navigation = ({ variant = 'black' }) => {
   const isWhite = variant === 'white';
@@ -18,24 +18,24 @@ const Navigation = ({ variant = 'black' }) => {
             <Link href="/merch" className={linkClass}>
               MERCH 
             </Link>
-            <Link href="/koncerter" className={linkClass}>
+            <Link href="/concerts" className={linkClass}>
               KONCERTER
             </Link>
           </div>
 
-          <div className="mx-16"> 
+          <div className="mx-16">
             <Link href="/" className="group relative">
-              <Image 
+              <Image
                 src={logoSrc}
-                alt="DMP Logo" 
-                width={78} 
+                alt="DMP Logo"
+                width={78}
                 height={78}
                 className="group-hover:opacity-0"
               />
-              <Image 
-                src="/svg/dmp-logo-soul.svg" 
-                alt="DMP Logo" 
-                width={78} 
+              <Image
+                src="/svg/dmp-logo-soul.svg"
+                alt="DMP Logo"
+                width={78}
                 height={78}
                 className="absolute inset-0 duration-300 opacity-0 group-hover:opacity-100 group-hover:scale-[1.5]"
               />
