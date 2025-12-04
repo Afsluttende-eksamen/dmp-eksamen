@@ -7,8 +7,7 @@ const Navigation = ({ variant = 'black' }) => {
   const isWhite = variant === 'white';
   const textColor = isWhite ? 'text-white' : 'text-black';
   const logoSrc = isWhite ? '/svg/dmp-logo-white.svg' : '/svg/dmp-logo-black.svg';
-  const hoverTextColor = isWhite ? 'hover:text-black' : 'hover:text-white';
-  const linkClass = `px-6 py-2.5 rounded-xl hover:bg-[#4F649B] ${hoverTextColor} hover:underline transition-all duration-300 ${textColor}`;
+  const linkClass = `px-6 rounded-xl hover:text-[#4F649B] hover:underline transition-all duration-300 ${textColor}`;
 
   return (
     <nav className="py-1">
@@ -17,7 +16,7 @@ const Navigation = ({ variant = 'black' }) => {
           {/* Left Links */}
           <div className="flex gap-12">
             <Link href="/merch" className={linkClass}>
-              MERCH
+              MERCH 
             </Link>
             <Link href="/koncerter" className={linkClass}>
               KONCERTER
