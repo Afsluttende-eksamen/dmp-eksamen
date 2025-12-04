@@ -26,20 +26,34 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col ">
-            <h2>Hurtige links</h2>
-            <Link href="/">Forside</Link>
-            <Link href="/merch">Merch</Link>
-            <Link href="/concerts">Koncerter</Link>
-            <Link href="/follow-us">Følg os</Link>
+          <div className="flex flex-col">
+            <h4>Hurtige links</h4>
+            <Link className="hover:underline" href="/">
+              Forside
+            </Link>
+            <Link className="hover:underline" href="/merch">
+              Merch
+            </Link>
+            <Link className="hover:underline" href="/concerts">
+              Koncerter
+            </Link>
+            <Link className="hover:underline" href="/follow-us">
+              Følg os
+            </Link>
           </div>
 
           <div className="flex flex-col">
-            <h2>Kontakt & Booking</h2>
-            <Link href="mailto:mail@dansermedpiger.dk">
+            <h4>Kontakt & Booking</h4>
+            <Link
+              className="hover:underline"
+              href="mailto:mail@dansermedpiger.dk"
+            >
               Mail: Mail@dansermedpiger.dk
             </Link>
-            <Link href="https://unitedstage.dk/artister/danser-med-piger/">
+            <Link
+              className="hover:underline"
+              href="https://unitedstage.dk/artister/danser-med-piger/"
+            >
               Booking via United Stage{" "}
             </Link>
           </div>
