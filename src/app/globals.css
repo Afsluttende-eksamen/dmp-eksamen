@@ -16,6 +16,11 @@ nav {
   font-size: 2.5rem;
 }
 
+h1 {
+  font-size: 100px;
+  font-weight: 900;
+}
+
 h2 {
   font-size: 25px;
   font-weight: 900;
