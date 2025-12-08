@@ -11,7 +11,7 @@ export default function Button({ children, variant = 'primary'}) {
   return (
     <button className={`transition-all duration-300 ${variants[variant]}`}>
       {children}
-      {variant === 'link' && <span>→</span>}
+   
     </button>
   );
 }
