@@ -13,7 +13,7 @@ const Cart = () => {
   const [clearState, setClearState] = useState(0);
 
   const total = cart
-    .reduce((acc, item) => acc + item.price * item.quantity, 0)
+    .reduce((acc, product) => acc + product.price * product.quantity, 0)
     .toFixed(2);
 
   const handleClearCartClick = () => {
@@ -38,18 +38,18 @@ const Cart = () => {
           <p className="text-gray-500">Kurven er tom</p>
         ) : (
           <div className="flex flex-col gap-6 relative">
-            {cart.map((item) => (
+            {cart.map((product) => (
               <div
-                key={item.id}
+                key={product.id}
                 className="flex items-center gap-6 border-b pb-4"
               >
                 <Link
-                  href={`/products/${item.id}`}
+                  href={`/products/${product.id}`}
                   className="text-blue-500 hover:underline"
                 >
                   <Image
-                    src={item.thumbnail}
-                    alt={item.title}
+                    src={product.thumbnail}
+                    alt={product.name}
                     width={350}
                     height={350}
                     className="object-cover rounded-xl mb-4 w-35 "
@@ -57,17 +57,16 @@ const Cart = () => {
                 </Link>
 
                 <div className="flex-1">
-                  <Link href={`/products/${item.id}`}>
-                    <p>{item.brand}</p>
-                    <h3 className="text-2xl font-bold">{item.title}</h3>
+                  <Link href={`/products/${product.id}`}>
+                    <h3 className="text-2xl font-bold">{product.name}</h3>
 
                     <p className="text-gray-500">
-                      {item.quantity} x {item.price} kr
+                      {product.quantity} x {product.price} kr
                     </p>
                   </Link>
                 </div>
                 <button
-                  onClick={() => removeFromCart(item.id)}
+                  onClick={() => removeFromCart(product.id)}
                   className="cursor-pointer mt-2 hover:underline"
                 >
                   <IoCloseOutline className="size-9" />
