@@ -5,6 +5,7 @@ import { useCartStore } from "@/store/cartStore";
 import { useState } from "react";
 import Image from "next/image";
 import { IoCloseOutline } from "react-icons/io5";
+import Button from "../components/ui/Button";
 
 const Cart = () => {
   const cart = useCartStore((state) => state.cart);
@@ -37,49 +38,64 @@ const Cart = () => {
         {cart.length === 0 ? (
           <p className="text-gray-500">Kurven er tom</p>
         ) : (
-          <div className="flex flex-col gap-6 relative">
+          <div className="flex flex-col  relative">
+            <div className="border-b grid grid-cols-4 place-items-center">
+              <h2>PRODUKT</h2>
+
+              <h2>PRIS</h2>
+
+              <h2>ANTAL</h2>
+              <h2>TOTAL</h2>
+            </div>
             {cart.map((product) => (
               <div
                 key={product.id}
-                className="flex items-center gap-6 border-b pb-4"
+                className="grid grid-cols-4  items-center  border-b pb-4"
               >
-                <Link
-                  href={`/products/${product.id}`}
-                  className="text-blue-500 hover:underline"
-                >
-                  <Image
-                    src={product.thumbnail}
-                    alt={product.name}
-                    width={350}
-                    height={350}
-                    className="object-cover rounded-xl mb-4 w-35 "
-                  />
-                </Link>
+                <div>
+                  <div className="flex  justify-between">
+                    <Link
+                      href={`/products/${product.id}`}
+                      className="text-blue-500 hover:underline"
+                    >
+                      <Image
+                        src={product.thumbnail}
+                        alt={product.name}
+                        width={350}
+                        height={350}
+                        className="object-cover rounded-xl mb-4 w-35 "
+                      />
+                    </Link>
 
-                <div className="flex-1">
-                  <Link href={`/products/${product.id}`}>
-                    <h3 className="text-2xl font-bold">{product.name}</h3>
+                    <div className="flex-1 self-center">
+                      <Link href={`/products/${product.id}`}>
+                        <h3 className="text-2xl font-bold">{product.name}</h3>
 
-                    <p className="text-gray-500">
-                      {product.quantity} x {product.price} kr
-                    </p>
-                  </Link>
+                        <p className="text-gray-500">Farve</p>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-                <button
+                <div className="mx-auto">{product.price} DKK</div>
+                <div className="mx-auto">{product.quantity}</div>
+                <div className="mx-auto">
+                  <p>{product.quantity * product.price} DKK</p>
+                </div>
+                {/* <button
                   onClick={() => removeFromCart(product.id)}
-                  className="cursor-pointer mt-2 hover:underline"
+                  className="cursor-pointer mt-2 hover:underline col-end-6"
                 >
                   <IoCloseOutline className="size-9" />
-                </button>
+                </button> */}
               </div>
             ))}
 
-            <button
+            {/* <button
               onClick={handleClearCartClick}
               className=" cursor-pointer bg-red-700 text-white font-semibold px-4 py-2 rounded-3xl hover:bg-red-800 transition inline-block w-fit mx-auto"
             >
               Tøm kurven
-            </button>
+            </button> */}
 
             {clearState === 1 && (
               <div className="absolute top-3/5 mt-2 left-1/2 transform -translate-x-1/2 bg-white rounded-2xl border border-gray-300 shadow-lg p-4  w-64 z-10">
@@ -103,21 +119,19 @@ const Cart = () => {
               </div>
             )}
 
-            <div className="bg-blue-100 p-4 rounded-2xl">
+            <div>
               <div className="flex justify-between p-1.5">
-                <p className="font-semibold ">Subtotal: </p>
-                <p>{total} kr</p>
+                <h2 className="font-semibold ">TOTAL </h2>
+                <p>{total} DKK</p>
               </div>
               <div className="flex justify-between p-1.5">
-                <p className="font-semibold">Levering:</p>
-                <p>0.00 kr</p>
+                <p className="font-semibold">
+                  Inklusiv {((total / 100) * 20).toFixed(2)} kr. i afgifter.
+                  Rabatter og levering beregnes ved betaling.
+                </p>
               </div>
-              <hr />
-              <div className="flex justify-between font-semibold p-1.5">
-                <p>Pris i alt:</p>
-                <p>{total} kr</p>
-              </div>
-              <button className="bg-black rounded-3xl text-white font-semibold hover:bg-sky-800 px-4 py-2 cursor-pointer">
+
+              <button className="bg-black rounded-xl text-white font-semibold hover:bg-sky-800 px-4 py-2 cursor-pointer">
                 Gå til betaling
               </button>
             </div>
