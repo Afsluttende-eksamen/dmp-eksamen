@@ -14,7 +14,7 @@ export default function Hero() {
         />
       </div>
       <div>
-        <Button variant="primary">BOOK VIA UNITED STAGE</Button>
+        <Button variant="secondary">BOOK VIA UNITED STAGE</Button>
       </div>
     </div>
   );
