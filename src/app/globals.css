@@ -17,8 +17,9 @@ nav {
 }
 
 h1 {
-  font-size: 100px;
-  font-weight: 900;
+  font-size: 150px;
+  font-weight: 400;
+  text-align: center;
 }
 
 h2 {
