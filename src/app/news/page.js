@@ -1,14 +1,15 @@
 import NewsList from '../components/news/NewsList';
-
-async function getPosts() {
-  const res = await fetch(process.env.NEXT_PUBLIC_NEWS_API_URL, {
-    cache: 'no-store',
-    next: { revalidate: 300 },
-  });
-  return res.json();
-}
+import Navigation from '../components/layout/Navigation';
+import Footer from '../components/layout/Footer';
+import { getNews } from '@/lib/api/news';
 
 export default async function News() {
-  const posts = await getPosts();
-  return <NewsList posts={posts} />;
+  const post = await getNews();
+  return (
+    <div>
+      <Navigation />
+      <NewsList posts={post} />
+      <Footer />
+    </div>
+  );
 }
