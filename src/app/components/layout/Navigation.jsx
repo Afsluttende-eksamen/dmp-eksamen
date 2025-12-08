@@ -15,7 +15,7 @@ const Navigation = ({ variant = 'black' }) => {
         <div className="flex items-center justify-between">
           {/* Left Links */}
           <div className="flex gap-12">
-            <Link href="/merch" className={linkClass}>
+            <Link href="/webshop" className={linkClass}>
               MERCH 
             </Link>
             <Link href="/concerts" className={linkClass}>
