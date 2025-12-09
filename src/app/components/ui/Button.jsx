@@ -7,7 +7,9 @@ export default function Button({ children, variant = "secondary" }) {
   };
 
   return (
-    <button className={`transition-all duration-300 ${variants[variant]}`}>
+    <button
+      className={`px-6 py-2.5 rounded-xl not-odd:transition-all duration-300 ${variants[variant]}`}
+    >
       {children}
     </button>
   );
