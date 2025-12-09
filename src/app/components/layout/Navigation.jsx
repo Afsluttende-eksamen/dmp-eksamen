@@ -45,7 +45,7 @@ const Navigation = ({ variant = 'black' }) => {
           {/* Right Links */}
           <div className="flex gap-12 items-center">
             <Link href="/om-os" className={linkClass}>
-              BLOG
+              OM OS
             </Link>
             <Link href="/kontakt" className={linkClass}>
               KONTAKT
