@@ -13,7 +13,7 @@ const CartIcon = () => {
       aria-hidden={quantity === 0}
     >
       <FaShoppingCart
-        className="col-start-1 row-span-2 row-start-2 justify-self-center self-center size-8"
+        className="col-start-1 row-span-2 row-start-2 justify-self-center self-center size-8 hover:text-[#4F649B] transition-colors duration-300"
         aria-hidden="true"
       />
 
