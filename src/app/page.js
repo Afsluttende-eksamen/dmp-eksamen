@@ -4,15 +4,31 @@ import ImageGallery from "./components/ui/ImageGallery";
 import NyhederForside from "./components/ui/NyhederForside";
 import AboutSection from "./components/ui/AboutSection";
 import Footer from "./components/layout/Footer";
-
-async function getPosts() {
-  const res = await fetch(process.env.NEXT_PUBLIC_NEWS_API_URL, {
-    cache: 'no-store',
-  });
-  return res.json();
-}
+import { getNews } from "@/lib/api/news";
 
 export default async function Home() {
+  const news = await getNews();
+
+  const categories = [];
+  
+  news.forEach(post => {
+    if (post.category && !categories.includes(post.category)) {
+      categories.push(post.category);
+    }
+  });
+
+    const posts = [];
+  categories.forEach(cat => {
+    for (const post of news) {
+      if (post.category === cat) {
+        posts.push(post);
+        break;
+      }
+    }
+  });
+
+
+
   return (
     <div className="relative">
       {/* Video Hero Section */}
@@ -33,18 +49,12 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Featured News */}
-      <NyhederForside />
+      <NyhederForside posts={posts} />
      
-
-      {/* About Section with Zoom Effect */}
       <AboutSection />
 
-      {/* Image Gallery with Parallax */}
       <ImageGallery />
-
-
-      {/* Footer */}
+    
       <Footer />
     </div>
   );

@@ -1,14 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Navigation from "../components/layout/Navigation";
-
-async function getProducts() {
-  const res = await fetch(
-    "https://script.google.com/macros/s/AKfycbzvkDaCSaY8XlmCI14PxcahsWYTwLrRdOQVb29cBPCl4TJfDmbRmvP_B7E4N3C3YDMR/exec"
-  );
-  const data = await res.json();
-  return data;
-}
+import { getProducts } from "@/lib/api/products";
 
 export default async function Webshop() {
   const products = await getProducts();

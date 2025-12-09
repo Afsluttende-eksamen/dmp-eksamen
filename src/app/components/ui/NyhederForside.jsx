@@ -1,28 +1,12 @@
 import Link from 'next/link';
 import Button from './Button';
 import NewsCard from '../news/NewsCard';
-import { getNews } from '@/lib/api/news';
 
-export default async function NyhederForside() {
-  const allPosts = await getNews();
-  const categories = ['Live', 'Musik', 'Nyheder'];
-  const posts = [];
-  categories.forEach((cat) => {
-    for (const post of allPosts) {
-      if (post.category === cat) {
-        posts.push(post);
-        break;
-      }
-    }
-  });
-
-
+export default function NyhederForside({ posts = [] }) {
   return (
-    <section className=" py-16">
+    <section className="py-16">
       <div className="px-8 mb-8">
-        <h2>
-          SENESTE NYT
-        </h2>
+        <h2>SENESTE NYT</h2>
       </div>
 
       <div className="px-8">
@@ -33,10 +17,11 @@ export default async function NyhederForside() {
             </Link>
           ))}
         </div>
-          <div className="flex items-center justify-center mt-6">
+
+        <div className="flex items-center justify-center mt-6">
           <Link href="/news">
-          <Button variant="primary">SE ALLE</Button>
-        </Link>
+            <Button variant="primary">SE ALLE</Button>
+          </Link>
         </div>
       </div>
     </section>
