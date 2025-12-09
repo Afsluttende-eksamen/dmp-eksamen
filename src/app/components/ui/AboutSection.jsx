@@ -74,7 +74,8 @@ export default function AboutSection() {
         <Image
           src="/images/img-beach.jpg"
           alt=""
-          fill
+          width={800}
+          height={600}
           className="object-cover "
         />
       </div>
