@@ -40,12 +40,12 @@ const Cart = () => {
         ) : (
           <div className="flex flex-col  relative">
             <div className="border-b grid grid-cols-4 place-items-center">
-              <h2>PRODUKT</h2>
+              <h4>PRODUKT</h4>
 
-              <h2>PRIS</h2>
+              <h4>PRIS</h4>
 
-              <h2>ANTAL</h2>
-              <h2>TOTAL</h2>
+              <h4>ANTAL</h4>
+              <h4>I ALT</h4>
             </div>
             {cart.map((product) => (
               <div
@@ -69,7 +69,7 @@ const Cart = () => {
 
                     <div className="flex-1 self-center">
                       <Link href={`/webshop/${product.id}`}>
-                        <h3 className="text-2xl font-bold">{product.name}</h3>
+                        <h4 className="text-2xl font-bold">{product.name}</h4>
 
                         <p className="text-gray-500">Farve</p>
                       </Link>
@@ -121,7 +121,7 @@ const Cart = () => {
 
             <div>
               <div className="flex justify-between p-1.5">
-                <h2 className="font-semibold ">TOTAL </h2>
+                <h3 className="font-semibold ">TOTAL </h3>
                 <p>{total} DKK</p>
               </div>
               <div className="flex justify-between p-1.5">
