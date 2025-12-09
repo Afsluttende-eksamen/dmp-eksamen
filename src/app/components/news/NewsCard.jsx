@@ -17,7 +17,7 @@ export default function NewsCard({ post }) {
 
       <div className="absolute bottom-8 left-8 right-8 text-white">
         <p className="opacity-80 uppercase mb-2">{post.category}</p>
-        <h3 className="mb-3 hover:underline">{post.title}</h3>
+        <h4 className="mb-3 hover:underline">{post.title}</h4>
         <p className="opacity-80">{post.content}</p>
       </div>
     </div>

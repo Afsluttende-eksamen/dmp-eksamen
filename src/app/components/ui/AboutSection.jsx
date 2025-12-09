@@ -74,8 +74,7 @@ export default function AboutSection() {
         <Image
           src="/images/img-beach.jpg"
           alt=""
-          width={800}
-          height={600}
+          fill
           className="object-cover "
         />
       </div>
@@ -97,7 +96,6 @@ export default function AboutSection() {
                 <Button variant="primary">KONTAKT OS NU</Button>
               </a>
             </div>
-            <div></div>
           </div>
         </div>
       </div>

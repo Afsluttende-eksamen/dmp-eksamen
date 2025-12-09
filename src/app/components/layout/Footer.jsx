@@ -9,11 +9,11 @@ const Footer = () => {
       <section className="flex-col mx-auto">
         <section className="flex  gap-[10dvw]  ">
           <div className="max-w-3xs ">
-            <h2>Danser Med Piger</h2>
+            <h4>Danser Med Piger</h4>
             <p>
               Dansk disco-pop band der bringer energi og stemning på scenen.
             </p>
-            <div className="flex gap-3 ">
+            <div className="flex gap-3 mt-4">
               <Link href="https://www.facebook.com/p/Danser-Med-Piger-100075755391006/?locale=da_DK">
                 <FaFacebook className="size-8" />
               </Link>
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col">
-            <h2>Hurtige links</h2>
+            <h4>Hurtige links</h4>
             <Link className="hover:underline" href="/">
               Forside
             </Link>
@@ -43,7 +43,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col">
-            <h2>Kontakt & Booking</h2>
+            <h4>Kontakt & Booking</h4>
             <Link
               className="hover:underline"
               href="mailto:mail@dansermedpiger.dk"
