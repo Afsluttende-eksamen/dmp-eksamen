@@ -1,25 +1,16 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import NewsCard from './NewsCard';
-import CategoryButton from '../ui/CategoryButton';
+import { useState } from "react";
+import NewsCard from "./NewsCard";
+import CategoryButton from "../ui/CategoryButton";
 
-const categories = ['Alle', 'Live', 'Musik', 'Nyheder'];
+export default function NewsList({ posts = [], categories = [] }) {
+  const [activeCategory, setActiveCategory] = useState("Alle");
 
-export default function NewsList({ posts = [] }) {
-  const [activeCategory, setActiveCategory] = useState('Alle');
-
-  let filteredPosts = [];
-
-  if (activeCategory === 'Alle') {
-    filteredPosts = posts;
-  } else {
-    posts.forEach((post) => {
-      if (post.category === activeCategory) {
-        filteredPosts.push(post);
-      }
-    });
-  }
+  const filteredPosts =
+    activeCategory === "Alle"
+      ? posts
+      : posts.filter((post) => post.category === activeCategory);
 
   return (
     <div className="px-8 py-16">
