@@ -68,7 +68,7 @@ const Cart = () => {
                     </Link>
 
                     <div className="flex-1 self-center">
-                      <Link href={`/products/${product.id}`}>
+                      <Link href={`/webshop/${product.id}`}>
                         <h3 className="text-2xl font-bold">{product.name}</h3>
 
                         <p className="text-gray-500">Farve</p>
@@ -90,12 +90,12 @@ const Cart = () => {
               </div>
             ))}
 
-            {/* <button
+            <button
               onClick={handleClearCartClick}
               className=" cursor-pointer bg-red-700 text-white font-semibold px-4 py-2 rounded-3xl hover:bg-red-800 transition inline-block w-fit mx-auto"
             >
               Tøm kurven
-            </button> */}
+            </button>
 
             {clearState === 1 && (
               <div className="absolute top-3/5 mt-2 left-1/2 transform -translate-x-1/2 bg-white rounded-2xl border border-gray-300 shadow-lg p-4  w-64 z-10">

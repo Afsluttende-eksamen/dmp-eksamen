@@ -2,11 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import CartIcon from "../cart/CartIcon";
 
-const Navigation = ({ variant = 'black' }) => {
-  const isWhite = variant === 'white';
-  const textColor = isWhite ? 'text-white' : 'text-black';
-  const logoSrc = isWhite ? '/svg/dmp-logo-white.svg' : '/svg/dmp-logo-black.svg';
+const Navigation = ({ variant = "black" }) => {
+  const isWhite = variant === "white";
+  const textColor = isWhite ? "text-white" : "text-black";
+  const logoSrc = isWhite
+    ? "/svg/dmp-logo-white.svg"
+    : "/svg/dmp-logo-black.svg";
   const linkClass = `px-6 rounded-xl hover:text-[#4F649B] hover:underline transition-all duration-300 ${textColor}`;
 
   return (
@@ -16,7 +19,7 @@ const Navigation = ({ variant = 'black' }) => {
           {/* Left Links */}
           <div className="flex gap-12">
             <Link href="/webshop" className={linkClass}>
-              MERCH 
+              MERCH
             </Link>
             <Link href="/concerts" className={linkClass}>
               KONCERTER
@@ -43,7 +46,7 @@ const Navigation = ({ variant = 'black' }) => {
           </div>
 
           {/* Right Links */}
-          <div className="flex gap-12 items-center">
+          <div className="flex gap-12 items-center justify-center">
             <Link href="/om-os" className={linkClass}>
               OM OS
             </Link>
@@ -51,7 +54,7 @@ const Navigation = ({ variant = 'black' }) => {
               KONTAKT
             </Link>
             <Link href="/kurv" className={textColor}>
-              <FontAwesomeIcon icon={faCartShopping} className="w-6 h-6" />
+              <CartIcon />
             </Link>
           </div>
         </div>
