@@ -25,7 +25,7 @@ export const useCartStore = create(
               ...state.cart,
               {
                 ...product,
-                price: Number(product.price.replace(",-", "")),
+                price: product.price,
                 quantity: 1,
               },
             ],

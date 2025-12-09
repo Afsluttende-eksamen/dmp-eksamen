@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import AddToCartButton from "@/app/components/webshop/AddToCartButton";
+import CartIcon from "@/app/components/cart/CartIcon";
 
 const ProductPage = async ({ params }) => {
   const { id } = await params;
@@ -21,6 +22,7 @@ const ProductPage = async ({ params }) => {
     <div className=" bg-white">
       <div>
         <Link href="/webshop">← Tilbage til merch</Link>
+
         <h1>{product.name}</h1>
         <Image
           src={product.thumbnail}
