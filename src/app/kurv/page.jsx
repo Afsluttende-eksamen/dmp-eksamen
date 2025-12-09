@@ -55,7 +55,7 @@ const Cart = () => {
                 <div>
                   <div className="flex  justify-between">
                     <Link
-                      href={`/products/${product.id}`}
+                      href={`/webshop/${product.id}`}
                       className="text-blue-500 hover:underline"
                     >
                       <Image
