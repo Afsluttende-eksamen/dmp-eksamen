@@ -1,28 +1,35 @@
-'use client';
+"use client";
 
-export default function NewsList({ posts }) {
+import { useState } from "react";
+import NewsCard from "./NewsCard";
+import CategoryButton from "../ui/CategoryButton";
+
+export default function NewsList({ posts = [], categories = [] }) {
+  const [activeCategory, setActiveCategory] = useState("Alle");
+
+  const filteredPosts =
+    activeCategory === "Alle"
+      ? posts
+      : posts.filter((post) => post.category === activeCategory);
+
   return (
-    <div className="p-8">
-      <h1 className="text-6xl mb-12">NYHEDER</h1>
+    <div className="px-8 py-16">
+      <h1 className="text-6xl md:text-7xl font-black mb-12">NYHEDER</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {posts.map((post, i) => (
-          <div key={i}>
-              {post.image && (
-                <img 
-                  src={post.image} 
-                  alt={post.title}
-                  className="w-full h-full object-cover"
-                
-                />
-              )}
-            <div className="mt-4">
-              <div className="text-sm opacity-60">{post.category}</div>
-              <h3 className="text-2xl mt-2">{post.title}</h3>
-              <p className="text-xl"> {post.content}</p>
-              <p className="text-xl"> {post.date}</p>
-            </div>
-          </div>
+      <div className="flex gap-3 mb-12">
+        {categories.map((category) => (
+          <CategoryButton
+            key={category}
+            label={category.toUpperCase()}
+            active={activeCategory === category}
+            onClick={() => setActiveCategory(category)}
+          />
+        ))}
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {filteredPosts.map((post, i) => (
+          <NewsCard key={i} post={post} />
         ))}
       </div>
     </div>

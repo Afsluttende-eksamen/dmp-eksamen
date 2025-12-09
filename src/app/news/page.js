@@ -1,14 +1,25 @@
 import NewsList from '../components/news/NewsList';
-
-async function getPosts() {
-  const res = await fetch(process.env.NEXT_PUBLIC_NEWS_API_URL, {
-    cache: 'no-store',
-    next: { revalidate: 300 },
-  });
-  return res.json();
-}
+import Navigation from '../components/layout/Navigation';
+import Footer from '../components/layout/Footer';
+import { getNews } from '@/lib/api/news';
 
 export default async function News() {
-  const posts = await getPosts();
-  return <NewsList posts={posts} />;
+  const post = await getNews();
+
+  const categories = ['Alle'];
+
+  post.forEach(post => {
+    if (!categories.includes(post.category)) {
+      categories.push(post.category);
+    }
+  }
+  )
+
+  return (
+    <div>
+      <Navigation />
+      <NewsList posts={post} categories={categories} />
+      <Footer />
+    </div>
+  );
 }
