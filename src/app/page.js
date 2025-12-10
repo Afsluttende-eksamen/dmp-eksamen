@@ -4,10 +4,12 @@ import ImageGallery from "./components/ui/ImageGallery";
 import NyhederForside from "./components/ui/NyhederForside";
 import AboutSection from "./components/ui/AboutSection";
 import Footer from "./components/layout/Footer";
+import SpotifyArtistSection from "./components/spotify/SpotifyArtistSection";
 import { getNews } from "@/lib/api/news";
 
 export default async function Home() {
   const news = await getNews();
+  const featuredArtistId = process.env.SPOTIFY_ARTIST_ID;
 
   const categories = [];
   
@@ -48,6 +50,8 @@ export default async function Home() {
           </main>
         </div>
       </section>
+
+      <SpotifyArtistSection artistId={featuredArtistId} />
 
       <NyhederForside posts={posts} />
      
