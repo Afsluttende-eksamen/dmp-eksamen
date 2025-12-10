@@ -7,7 +7,7 @@ export default async function SpotifyArtistSection({
   topTracksLimit = 4,
   market = "DK",
 }) {
-  const resolvedArtistId = process.env.SPOTIFY_ARTIST_ID;
+  const resolvedArtistId = artistId || process.env.SPOTIFY_ARTIST_ID;
 
   const topTracks = (await getArtistTopTracks(resolvedArtistId, market)) ?? [];
   const tracksToShow = topTracks.slice(0, topTracksLimit);
@@ -18,7 +18,7 @@ export default async function SpotifyArtistSection({
         <div>
           {tracksToShow.length ? (
             <div className="mt-6">
-              <h4>Top tracks</h4>
+              <h3>Top tracks</h3>
               <ul className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4 ">
                 {tracksToShow.map((track, index) => (
                   <li

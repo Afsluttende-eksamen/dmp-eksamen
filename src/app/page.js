@@ -33,7 +33,6 @@ export default async function Home() {
 
   return (
     <div className="relative">
-      {/* Video Hero Section */}
       <section className="relative h-screen flex flex-col bg-black">
         <video
           autoPlay
@@ -51,9 +50,9 @@ export default async function Home() {
         </div>
       </section>
 
-      <SpotifyArtistSection artistId={featuredArtistId} />
 
       <NyhederForside posts={posts} />
+      <SpotifyArtistSection artistId={featuredArtistId} />
      
       <AboutSection />
 

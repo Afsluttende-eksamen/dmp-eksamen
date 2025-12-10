@@ -6,7 +6,7 @@ export default function NyhederForside({ posts = [] }) {
   return (
     <section className="py-16">
       <div className="px-8 mb-8">
-        <h2>SENESTE NYT</h2>
+        <h1>SENESTE NYT</h1>
       </div>
 
       <div className="px-8">
