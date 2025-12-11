@@ -4,7 +4,7 @@ export default function YouTubeFeed({ videos }) {
   return (
     <div>
       <h2>YouTube</h2>
-      <div className="flex overflow-x-auto gap-4 p-4 whitespace-nowrap scrollbar-hide">
+      <div className="flex overflow-x-auto gap-2.5 p-4 whitespace-nowrap scrollbar-hide">
         {videos.map((url, idx) => (
           <iframe
             key={idx}

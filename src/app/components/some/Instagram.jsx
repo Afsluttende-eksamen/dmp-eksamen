@@ -11,7 +11,7 @@ export default function InstagramEmbed({ posts }) {
       ></div>
       <div>
         <h2>Instagram</h2>
-        <div className="overflow-y-hidden w-full overflow-x-auto whitespace-nowrap scrollbar-hide flex gap-2.5 h-90 ">
+        <div className="overflow-y-hidden w-full overflow-x-auto whitespace-nowrap scrollbar-hide flex gap-2.5 h-90 p-4">
           <Script
             src="https://www.instagram.com/embed.js"
             strategy="lazyOnload"
