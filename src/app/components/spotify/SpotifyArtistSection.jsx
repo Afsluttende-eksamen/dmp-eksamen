@@ -15,9 +15,9 @@ export default async function SpotifyArtistSection({
 
   return (
     <section className="relative z-10 w-full bg-black px-8 py-16 overflow-hidden">
-      <div className="px-0 pb-16 flex flex-col items-start mx-20 justify-center text-white mb-8">
+      <div className="px-0 pb-16 flex flex-col items-start mx-10 md:mx-20 justify-center text-white mb-8">
         <h1>Musik</h1>
-        <h2 className="text-white/80">Find os på Spotify og Apple Music</h2>
+        <h3 className="text-white/80">Find os på Spotify og Apple Music</h3>
       </div>
 
       <div className="w-full">
