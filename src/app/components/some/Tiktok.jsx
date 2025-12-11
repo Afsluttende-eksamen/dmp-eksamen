@@ -11,7 +11,7 @@ export default function TikTokEmbed({ tiktokPosts }) {
           return (
             <blockquote
               key={url}
-              className="relative -top-5  tiktok-embed mr-4 inline-block h-140 overflow-hidden pb-20"
+              className="relative -top-5  tiktok-embed mr-4 inline-block h-140 overflow-hidden pb-20 rounded-2xl"
               cite={url}
               data-video-id={videoId}
               style={{

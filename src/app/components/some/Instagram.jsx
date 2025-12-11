@@ -10,7 +10,7 @@ export default function InstagramEmbed({ posts }) {
         data-elfsight-app-lazy
       ></div>
 
-      <div className="overflow-y-hidden w-full overflow-x-auto whitespace-nowrap scrollbar-hide flex gap-2.5 h-80">
+      <div className="overflow-y-hidden w-full overflow-x-auto whitespace-nowrap scrollbar-hide flex gap-2.5 h-90">
         <Script
           src="https://www.instagram.com/embed.js"
           strategy="lazyOnload"
@@ -19,7 +19,7 @@ export default function InstagramEmbed({ posts }) {
         {posts.map((url) => (
           <blockquote
             key={url}
-            className="relative overflow-hidden -top-15 instagram-media inline-block mr-4 h-90 pb-10 -mb-2.5-9 "
+            className="relative overflow-hidden -top-15 instagram-media inline-block mr-4 h-97 pb-10  rounded-2xl "
             data-instgrm-permalink={url}
             data-instgrm-version="14"
             style={{
