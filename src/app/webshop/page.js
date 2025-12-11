@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import Navigation from "../components/layout/Navigation";
 import { getProducts } from "@/lib/api/products";
 import ProductCard from "../components/webshop/ProductCard";
@@ -17,7 +15,7 @@ export default async function Webshop() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard key={product.slug} product={product}  />
           ))}
         </div>
       </div>
