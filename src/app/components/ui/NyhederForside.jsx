@@ -4,8 +4,8 @@ import NewsCard from '../news/NewsCard';
 
 export default function NyhederForside({ posts = [] }) {
   return (
-    <section className="py-16">
-      <div className="px-8 mb-8">
+    <section className="pb-8  mt-16">
+      <div className="px-8 mb-2">
         <h1>SENESTE NYT</h1>
       </div>
 

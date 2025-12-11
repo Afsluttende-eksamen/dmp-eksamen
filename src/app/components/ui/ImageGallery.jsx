@@ -26,14 +26,15 @@ export default function ImageGallery() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {/* Stort billede til venstre */}
           <div className="relative overflow-hidden rounded-3xl md:col-span-2 md:row-span-2">
-            <Image
+            {/* <Image
               src={images[2]}
               alt="Gallery"
               width={1600}
               height={900}
               priority
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-            />
+            /> */}
+             <video src={videos[0]} controls className="w-full h-full object-cover rounded-3xl"></video>
           </div>
 
   
@@ -49,11 +50,11 @@ export default function ImageGallery() {
            
           </div>
              <div className="flex flex-col bg-[#4F649B] justify-between p-6 rounded-3xl">
-            <h3 className="text-4xl md:text-6xl mb-12 text-white">
+            <h4  className="text-4xl md:text-6xl mb-12 text-white">
               Udforsk hele vores galleri med billeder fra shows, backstage og meget mere.
-            </h3>
+            </h4>
             <Link href="/gallery">
-              <Button variant="link">TIL GALLERIET</Button>
+              <Button variant="secondary">TIL GALLERIET</Button>
             </Link>
           </div>
      
@@ -72,14 +73,14 @@ export default function ImageGallery() {
 
           {/* Stort billede til højre nederst */}
           <div className="relative overflow-hidden rounded-3xl md:col-span-2 md:row-span-2 group">
-            {/* <Image
+            <Image
               src={images[4]}
               alt="Gallery"
               width={1600}
               height={900}
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-            /> */}
-             <video src={videos[0]} controls className="w-full h-full object-cover rounded-3xl"></video>
+            />
+            
           </div>
 
           {/* Boksen med CTA-knap */}

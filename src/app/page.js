@@ -2,9 +2,10 @@ import Navigation from "./components/layout/Navigation";
 import Hero from "./components/ui/Hero";
 import ImageGallery from "./components/ui/ImageGallery";
 import NyhederForside from "./components/ui/NyhederForside";
-import AboutSection from "./components/ui/AboutSection";
+import Booking from "./components/ui/BookingForside";
 import Footer from "./components/layout/Footer";
 import SpotifyArtistSection from "./components/spotify/SpotifyArtistSection";
+import TourForside from "./components/ui/TourForside";
 import { getNews } from "@/lib/api/news";
 
 export default async function Home() {
@@ -52,13 +53,15 @@ export default async function Home() {
 
 
       <NyhederForside posts={posts} />
-      <SpotifyArtistSection artistId={featuredArtistId} />
      
-      <AboutSection />
+      <TourForside />
+      <Booking />
+      
+      <SpotifyArtistSection artistId={featuredArtistId} />
 
       <ImageGallery />
     
-      <Footer />
+    
     </div>
   );
 }
