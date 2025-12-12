@@ -1,6 +1,6 @@
-import Instagram from "../components/some/Instagram";
-import TikTokEmbed from "../components/some/Tiktok";
-import YouTubeFeed from "../components/some/Youtube";
+import Instagram from "./Instagram";
+import TikTokEmbed from "./Tiktok";
+import YouTubeFeed from "./Youtube";
 
 export default function SoMeEmbed() {
   return (

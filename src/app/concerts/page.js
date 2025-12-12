@@ -1,13 +1,15 @@
 import Footer from "../components/layout/Footer";
 import CartIcon from "../components/cart/CartIcon";
 import Instagram from "../components/some/Instagram";
-import InstagramEmbed from "../components/some/Instagram";
+
 import TikTokEmbed from "../components/some/Tiktok";
 import YouTubeFeed from "../components/some/Youtube";
+import SoMeEmbed from "../components/some/SoMeEmbed";
 export default function Concerts() {
   return (
     <div>
-      <InstagramEmbed
+      <SoMeEmbed />
+      {/* <InstagramEmbed
         posts={[
           "https://www.instagram.com/p/DRkHkAZjHap/",
           "https://www.instagram.com/p/DLe8aEqsvrL/",
@@ -36,7 +38,7 @@ export default function Concerts() {
           "https://www.youtube.com/embed/URbWuLjIYaQ?si=N_whjD0DODLwrhsz",
           "https://www.youtube.com/embed/rRG8NDu-CEs?si=8AYM65mBo7H3o2Fh",
         ]}
-      />
+      /> */}
       <Footer></Footer>
     </div>
   );
