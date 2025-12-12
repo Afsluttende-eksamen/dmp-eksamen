@@ -45,7 +45,6 @@ export default function Concerts() {
 
   return (
     <div className="relative h-screen">
-      {/* Fixed Background Image */}
       <div className="fixed inset-0 z-0">
         <Image
           src="/images/koncerter-bg.jpg"
