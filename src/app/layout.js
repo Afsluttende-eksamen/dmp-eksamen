@@ -3,7 +3,6 @@ import "./globals.css";
 import Navigation from "./components/layout/Navigation";
 import Footer from "./components/layout/Footer";
 
-
 const archivo = Archivo({
   subsets: ["latin"],
   variable: "--font-archivo",
@@ -25,6 +24,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${archivo.variable} ${newsreader.variable} antialiased`}
       >
+        <Navigation />
         {children}
         <Footer />
       </body>
