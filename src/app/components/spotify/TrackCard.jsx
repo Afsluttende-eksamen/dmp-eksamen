@@ -11,7 +11,7 @@ export default function TrackCard({ track }) {
   const appleMusicSearchUrl = `https://music.apple.com/dk/search?term=${trackName}%20${artistName}`;
 
   return (
-    <div className="flex flex-col items-center lg:w-100 lg:h-150 md:w-80 md:h-120 gap-5 rounded-2xl px-5 py-5text-white transition-transform duration-200 hover:scale-105">
+    <div className="flex flex-col items-center lg:w-100 lg:h-100 md:w-80 md:h-120 gap-5 rounded-2xl px-5 py-5text-white transition-transform duration-200 hover:scale-105">
       <Image
         src={track.album.images[0].url}
         alt={track.name}
