@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import Link from "next/link";
 const Footer = () => {
   return (
-    <footer className=" bg-black text-white w-[97dvw] mx-[1.5dvw] h-96 rounded-3xl flex flex-col   justify-center">
+    <footer className=" bg-black text-white w-[97dvw] mx-[1.5dvw] h-96 rounded-t-3xl flex flex-col justify-center">
       <section className="flex-col mx-auto">
         <section className="flex  gap-[10dvw]  ">
           <div className="max-w-3xs ">
