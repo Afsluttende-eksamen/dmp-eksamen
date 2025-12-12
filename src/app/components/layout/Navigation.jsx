@@ -21,7 +21,7 @@ const Navigation = ({ variant = "black" }) => {
             <Link href="/webshop" className={linkClass}>
               MERCH
             </Link>
-            <Link href="/concerts" className={linkClass}>
+            <Link href="/koncerter" className={linkClass}>
               KONCERTER
             </Link>
           </div>
