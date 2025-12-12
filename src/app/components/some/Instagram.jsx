@@ -1,7 +1,7 @@
 "use client";
 import Script from "next/script";
 
-export default function InstagramEmbed({ posts }) {
+export default function Instagram({ posts }) {
   return (
     <>
       <script src="https://elfsightcdn.com/platform.js" async></script>
