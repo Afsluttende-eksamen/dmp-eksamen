@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navigation from "../components/layout/Navigation.jsx";
 
 export default function Kontakt() {
   return (
     <div>
+      <Navigation />
       <h1>Kontakt</h1>
       <section className="grid grid-cols-2 mb-8">
         <div className="border-r">
