@@ -1,4 +1,4 @@
-import { Archivo } from "next/font/google";
+import { Archivo, Newsreader } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/layout/Navigation";
 import Footer from "./components/layout/Footer";
@@ -7,6 +7,11 @@ import Footer from "./components/layout/Footer";
 const archivo = Archivo({
   subsets: ["latin"],
   variable: "--font-archivo",
+});
+
+const newsreader = Newsreader({
+  subsets: ["latin"],
+  variable: "--font-newsreader",
 });
 
 export const metadata = {
@@ -18,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${archivo.variable} antialiased`}
+        className={`${archivo.variable} ${newsreader.variable} antialiased`}
       >
         {children}
         <Footer />
