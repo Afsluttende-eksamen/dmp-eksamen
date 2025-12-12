@@ -5,6 +5,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import Button from './Button';
+import ListItem from './ListItem';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,19 +96,24 @@ export default function TourForside() {
           <h2 className="mb-8 md:mb-12">
             TOURPLAN 2025
           </h2>
-          <div className="space-y-4 mb-8">
-            <div className="pb-4 border-b flex items-center gap-4 ">
-             <h3>VEGA</h3>
-              <h4>Copenhagen • 15. MAR</h4>
-            </div>
-            <div className="pb-4 border-b flex items-center gap-4 ">
-              <h3>TRAIN</h3>
-              <h4>Aarhus • 22. MAR</h4>
-            </div>
-            <div className="pb-4 border-b flex items-center gap-4 ">
-              <h3>TRAIN</h3>
-              <h4>Odense • 29. MAR</h4>
-            </div>
+          <div className="flex flex-col gap-6 mb-12">
+            <ListItem 
+              venue="VEGA" 
+              location="Copenhagen" 
+              date="15. MAR" 
+              ticketLink="#"
+             
+            />
+            <ListItem 
+              venue="TRAIN" 
+              location="Aarhus" 
+              date="22. MAR"
+            />
+            <ListItem 
+              venue="STUDENTERHUSET" 
+              location="Aalborg" 
+              date="29. MAR"
+            />
           </div>
           <div className="flex justify-center md:justify-start">
             <a href="/concerts">

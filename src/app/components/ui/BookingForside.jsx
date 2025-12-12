@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import Button from './Button';
+import BookingItem from './BookingItem';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -73,7 +74,7 @@ export default function BookingForside() {
         className="hidden md:block absolute overflow-hidden z-10"
       >
         <Image
-          src="/images/img-6.jpg"
+          src="/images/band-wagon.jpg"
           alt="img-6"
           fill
           className="object-cover"
@@ -88,18 +89,9 @@ export default function BookingForside() {
             BOOK DANSER MED PIGER TIL
           </h2>
           <div className="space-y-4 mb-8">
-            <div className="pb-4 border-b flex items-center gap-3 md:gap-4">
-              <h3>1</h3>
-              <h4>Koncerter og festivaler</h4>
-            </div>
-            <div className="pb-4 border-b flex items-center gap-3 md:gap-4">
-              <h3>2</h3>
-              <h4>Firmafester og events</h4>
-            </div>
-            <div className="pb-4 border-b flex items-center gap-3 md:gap-4">
-              <h3>3</h3>
-              <h4>Private arrangementer</h4>
-            </div>
+            <BookingItem number="1" text="Koncerter og festivaler" />
+            <BookingItem number="2" text="Firmafester og events" />
+            <BookingItem number="3" text="Private arrangementer" />
           </div>
           <div className="flex justify-center md:justify-start">
             <a href="https://unitedstage.dk/artister/danser-med-piger/" target="_blank" rel="noreferrer">
