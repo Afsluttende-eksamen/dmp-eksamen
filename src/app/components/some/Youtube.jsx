@@ -8,7 +8,7 @@ export default function YouTubeFeed({ videos }) {
         {videos.map((url, idx) => (
           <iframe
             key={idx}
-            className="shrink-0 w-90 h-58 rounded-lg"
+            className="shrink-0 w-150 h-100 rounded-lg"
             src={url}
             title={`YouTube video ${idx + 1}`}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
