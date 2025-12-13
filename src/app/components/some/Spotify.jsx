@@ -3,7 +3,6 @@
 export default function Spotify() {
   return (
     <div>
-      <h2>Spotify</h2>
       <div className="flex overflow-x-auto gap-2.5 p-4 whitespace-nowrap scrollbar-hide">
         <iframe
           data-testid="embed-iframe"

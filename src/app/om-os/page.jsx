@@ -1,6 +1,7 @@
 import Navigation from "../components/layout/Navigation";
 import Image from "next/image";
 import Spotify from "../components/some/Spotify";
+import SoMeEmbed from "../components/some/SoMeEmbed";
 
 export default function AboutPage() {
   return (
@@ -25,6 +26,10 @@ export default function AboutPage() {
         lade være, og fordi det stadig føles lige så rigtigt, som da vi spillede
         vores første akkorder sammen.{" "}
       </p>
+      <h3>Se hvad der sker bag scenen</h3>
+      <div>
+        <SoMeEmbed />
+      </div>
       <Spotify />
     </div>
   );
