@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div>
       <Navigation />
-      <h2 className="text-center ">OM OS </h2>
+      <h1 className="text-center ">OM OS </h1>
       <Image
         src="/images/img-omhero.jpeg"
         alt="Description of image"
