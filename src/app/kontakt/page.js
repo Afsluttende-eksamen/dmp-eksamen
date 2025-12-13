@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/layout/Navigation.jsx";
+import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 export default function Kontakt() {
   return (
@@ -19,7 +20,7 @@ export default function Kontakt() {
         </div>
 
         <div className="flex flex-col gap-6 mx-auto ">
-          <h2>Booking</h2>
+          <h2 className="-ml-2">Booking</h2>
           <h4>
             United Stage er det officielle bookingbureau for Danser Med Piger.
           </h4>
@@ -67,14 +68,27 @@ export default function Kontakt() {
             </Link>
           </div>
           <br />
-          <h2>Kontakt os</h2>
-          <h4>Send os en mail</h4>
-          <Link
-            href="mailto:info@dansermedpiger.dk"
-            className="text-[#4F649B] hover:underline"
-          >
-            info@dansermedpiger.dk
-          </Link>
+          <h2 className="-ml-2">Kontakt os</h2>
+          <div>
+            <h4>Send os en mail eller find os på sociale medier</h4>
+            <Link
+              href="mailto:info@dansermedpiger.dk"
+              className="text-[#4F649B] hover:underline"
+            >
+              info@dansermedpiger.dk
+            </Link>
+            <div className="flex gap-3 mt-4">
+              <Link href="https://www.facebook.com/p/Danser-Med-Piger-100075755391006/?locale=da_DK">
+                <FaFacebook className="size-8 hover:text-[#4F649B]" />
+              </Link>
+              <Link href="https://www.tiktok.com/@dansermedpiger">
+                <FaTiktok className="size-8 hover:text-[#4F649B]" />
+              </Link>
+              <Link href="https://www.instagram.com/dansermedpiger/?hl=da">
+                <FaInstagram className="size-8 hover:text-[#4F649B]" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>
