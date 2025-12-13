@@ -34,7 +34,7 @@ const Cart = () => {
     <div>
       <Navigation />
       <h1 className="place-self-center">KURV</h1>
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto mb-10">
         {cart.length === 0 ? (
           <p className="text-gray-500">Kurven er tom</p>
         ) : (
@@ -49,13 +49,13 @@ const Cart = () => {
             </div>
             {cart.map((product) => (
               <div
-                key={product.id}
+                key={product.slug}
                 className="grid grid-cols-4  items-center  border-b pb-4"
               >
                 <div>
                   <div className="flex  justify-between">
                     <Link
-                      href={`/webshop/${product.id}`}
+                      href={`/webshop/${product.slug}`}
                       className="text-blue-500 hover:underline"
                     >
                       <Image
@@ -68,10 +68,10 @@ const Cart = () => {
                     </Link>
 
                     <div className="flex-1 self-center">
-                      <Link href={`/webshop/${product.id}`}>
+                      <Link href={`/webshop/${product.slug}`}>
                         <h4 className="text-2xl font-bold">{product.name}</h4>
 
-                        <p className="text-gray-500">Farve</p>
+                        <p className="text-gray-500">{product.color}</p>
                       </Link>
                     </div>
                   </div>
@@ -90,38 +90,10 @@ const Cart = () => {
               </div>
             ))}
 
-            <button
-              onClick={handleClearCartClick}
-              className=" cursor-pointer bg-red-700 text-white font-semibold px-4 py-2 rounded-3xl hover:bg-red-800 transition inline-block w-fit mx-auto"
-            >
-              Tøm kurven
-            </button>
-
-            {clearState === 1 && (
-              <div className="absolute top-3/5 mt-2 left-1/2 transform -translate-x-1/2 bg-white rounded-2xl border border-gray-300 shadow-lg p-4  w-64 z-10">
-                <p className="text-center mb-4 font-medium">
-                  Er du sikker på, at du vil tømme kurven?
-                </p>
-                <div className="flex justify-center gap-4">
-                  <button
-                    onClick={handleJa}
-                    className="bg-red-700 text-white px-3 py-1 rounded-3xl hover:bg-red-800 transition"
-                  >
-                    Ja
-                  </button>
-                  <button
-                    onClick={handleNej}
-                    className="bg-gray-300 text-gray-800 px-3 py-1 rounded-3xl hover:bg-gray-400 transition"
-                  >
-                    Nej
-                  </button>
-                </div>
-              </div>
-            )}
-
             <div>
               <div className="flex justify-between p-1.5">
-                <h3 className="font-semibold ">TOTAL </h3>
+                <h4 className="font-semibold ">TOTAL </h4>
+
                 <p>{total} DKK</p>
               </div>
               <div className="flex justify-between p-1.5">
@@ -129,6 +101,34 @@ const Cart = () => {
                   Inklusiv {((total / 100) * 20).toFixed(2)} kr. i afgifter.
                   Rabatter og levering beregnes ved betaling.
                 </p>
+                <button
+                  onClick={handleClearCartClick}
+                  className=" cursor-pointer bg-red-700 text-white font-semibold px-4 py-2 rounded-3xl hover:bg-red-800 transition inline-block w-fit "
+                >
+                  Tøm kurven
+                </button>
+
+                {clearState === 1 && (
+                  <div className="absolute top-3/5 mt-2 left-1/2 transform -translate-x-1/2 bg-white rounded-2xl border border-gray-300 shadow-lg p-4  w-64 z-10">
+                    <p className="text-center mb-4 font-medium">
+                      Er du sikker på, at du vil tømme kurven?
+                    </p>
+                    <div className="flex justify-center gap-4">
+                      <button
+                        onClick={handleJa}
+                        className="bg-red-700 text-white px-3 py-1 rounded-3xl hover:bg-red-800 transition"
+                      >
+                        Ja
+                      </button>
+                      <button
+                        onClick={handleNej}
+                        className="bg-gray-300 text-gray-800 px-3 py-1 rounded-3xl hover:bg-gray-400 transition"
+                      >
+                        Nej
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
 
               <button className="bg-black rounded-xl text-white font-semibold hover:bg-sky-800 px-4 py-2 cursor-pointer">
