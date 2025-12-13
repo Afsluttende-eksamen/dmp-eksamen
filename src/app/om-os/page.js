@@ -46,14 +46,14 @@ export default function AboutPage() {
         </Button>
       </div> */}
 
-      <h2 className="pb-8">Se hvad der sker bag scenen</h2>
-      <div>
+      <h2>Se hvad der sker bag scenen</h2>
+      <div className="py-8">
         <SoMeEmbed />
       </div>
-      {/* <div className="text-center my-10">
+      <div className="text-center my-10">
         <h3>Lyt til vores musik</h3>
         <Spotify />
-      </div> */}
+      </div>
     </div>
   );
 }
