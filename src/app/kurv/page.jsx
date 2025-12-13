@@ -63,7 +63,7 @@ const Cart = () => {
                         alt={product.name}
                         width={350}
                         height={350}
-                        className="object-cover rounded-xl mb-4 w-35 "
+                        className="object-cover rounded-xl my-4 w-35 "
                       />
                     </Link>
 
