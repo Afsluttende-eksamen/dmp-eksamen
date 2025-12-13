@@ -1,24 +1,13 @@
-'use client';
-
-import { useEffect, useState } from 'react';
 import TrackCard from './TrackCard';
+import { getArtistTopTracks } from '@/lib/api/spotify';
 
-export default function SpotifyArtistSection({
+export default async function SpotifyArtistSection({
   artistId,
   topTracksLimit = 10,
   market = "DK",
 }) {
-  const [tracks, setTracks] = useState([]);
- 
-
-  useEffect(() => {
-  async function fetchTracks() {
-    const response = await fetch(`/api/spotify/top-tracks?artistId=${artistId}&market=${market}&limit=${topTracksLimit}`);
-    const data = await response.json();
-    setTracks(data.tracks || []);
-  }
-  fetchTracks();
-}, [artistId, market, topTracksLimit]);
+  const allTracks = await getArtistTopTracks(artistId, market);
+  const tracks = allTracks.slice(0, topTracksLimit);
 
   return (
     <section className="relative z-10 w-full bg-black px-8 py-16 overflow-hidden">
