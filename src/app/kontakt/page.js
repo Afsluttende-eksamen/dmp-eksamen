@@ -18,13 +18,11 @@ export default function Kontakt() {
           />
         </div>
 
-        <div className="flex flex-col gap-7 mx-auto ">
-          <h3>BOOKING</h3>
+        <div className="flex flex-col gap-6 mx-auto ">
+          <h2>Booking</h2>
           <h4>
             United Stage er det officielle bookingbureau for Danser Med Piger.
           </h4>
-
-          <h3>INFORMATION OM BOOKING</h3>
 
           <h4>Koncerter og festivaler:</h4>
           <div>
@@ -55,9 +53,9 @@ export default function Kontakt() {
             </Link>
           </div>
 
-          <h4>Priser</h4>
           <div>
-            <p>
+            <h4>Priser</h4>
+            <p className="max-w-[65ch]">
               Prisen afhænger af arrangementets omfang. Ring til United Stage og
               få svar på dine spørgsmål.
             </p>
@@ -68,7 +66,9 @@ export default function Kontakt() {
               +45 33 97 90 10
             </Link>
           </div>
-          <h3>ANDET</h3>
+          <br />
+          <h2>Kontakt os</h2>
+          <h4>Send os en mail</h4>
           <Link
             href="mailto:info@dansermedpiger.dk"
             className="text-[#4F649B] hover:underline"
