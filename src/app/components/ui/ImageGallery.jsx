@@ -16,11 +16,11 @@ export default function ImageGallery() {
   ];
 
   return (
-    <section className="bg-white mx-20 py-32">
+    <section className="bg-white mx-20 py-16">
       <div className="px-8">
 
-        <div className="flex justify-center mb-12">
-          <h2>GALLERI</h2>
+        <div className="flex justify-start mb-12">
+          <h1>GALLERI</h1>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
