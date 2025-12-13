@@ -7,7 +7,7 @@ export default function Instagram({ posts }) {
     <>
       <div>
         <Link href="https://www.instagram.com/dansermedpiger/" target="_blank">
-          <h4>Instagram</h4>
+          <h4 className="ml-2">Instagram</h4>
         </Link>
         <div className="overflow-y-hidden w-full overflow-x-auto whitespace-nowrap scrollbar-hide flex gap-2.5 h-150 pb-4">
           <Script

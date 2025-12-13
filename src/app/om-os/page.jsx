@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div>
       <Navigation />
-      <h2 className="text-center">OM OS </h2>
+      <h2 className="text-center ">OM OS </h2>
       <Image
         src="/images/img-omhero.jpeg"
         alt="Description of image"
@@ -46,11 +46,14 @@ export default function AboutPage() {
         </Button>
       </div> */}
 
-      <h3>Se hvad der sker bag scenen</h3>
+      <h3 className="pb-8">Se hvad der sker bag scenen</h3>
       <div>
         <SoMeEmbed />
       </div>
-      <Spotify />
+      {/* <div className="text-center my-10">
+        <h3>Lyt til vores musik</h3>
+        <Spotify />
+      </div> */}
     </div>
   );
 }

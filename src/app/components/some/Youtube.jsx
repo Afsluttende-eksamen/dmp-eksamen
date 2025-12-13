@@ -6,7 +6,7 @@ export default function YouTubeFeed({ videos }) {
   return (
     <div>
       <Link href="https://www.youtube.com/@DanserMedPiger" target="_blank">
-        <h4>YouTube</h4>
+        <h4 className="ml-2"> YouTube</h4>
       </Link>
       <div className="flex overflow-x-auto gap-2.5 p-4 whitespace-nowrap scrollbar-hide">
         {videos.map((url, idx) => (
