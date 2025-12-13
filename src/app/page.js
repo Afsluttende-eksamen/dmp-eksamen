@@ -6,31 +6,9 @@ import Booking from "./components/ui/BookingForside";
 import Footer from "./components/layout/Footer";
 import SpotifyArtistSection from "./components/spotify/SpotifyArtistSection";
 import TourForside from "./components/ui/TourForside";
-import { getNews } from "@/lib/api/news";
 
-export default async function Home() {
-  const news = await getNews();
+export default function Home() {
   const featuredArtistId = process.env.SPOTIFY_ARTIST_ID;
-
-  const categories = [];
-  
-  news.forEach(post => {
-    if (post.category && !categories.includes(post.category)) {
-      categories.push(post.category);
-    }
-  });
-
-    const posts = [];
-  categories.forEach(cat => {
-    for (const post of news) {
-      if (post.category === cat) {
-        posts.push(post);
-        break;
-      }
-    }
-  });
-
-
 
   return (
     <div className="relative">
@@ -52,7 +30,7 @@ export default async function Home() {
       </section>
 
 
-      <NyhederForside posts={posts} />
+      <NyhederForside />
      
       <TourForside />
       <Booking />

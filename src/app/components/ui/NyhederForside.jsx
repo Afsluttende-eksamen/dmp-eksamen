@@ -1,8 +1,37 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Button from './Button';
 import NewsCard from '../news/NewsCard';
+import { getNews } from '@/lib/api/news';
 
-export default function NyhederForside({ posts = [] }) {
+export default function NyhederForside() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    getNews().then(news => {
+      const categories = [];
+      news.forEach(post => {
+        if (post.category && !categories.includes(post.category)) {
+          categories.push(post.category);
+        }
+      });
+
+      const featuredPosts = [];
+      categories.forEach(cat => {
+        for (const post of news) {
+          if (post.category === cat) {
+            featuredPosts.push(post);
+            break;
+          }
+        }
+      });
+
+      setPosts(featuredPosts);
+    });
+  }, []);
+
   return (
     <section className="pb-8">
       <div className="px-8 mb-2">
