@@ -12,7 +12,7 @@ export default function Button({
     primary:
       "px-6 py-2.5 rounded-xl duration-300 bg-[#4F649B] text-white hover:text-[#4F649B] hover:bg-white hover:underline hover:scale-110 border-2 hover:border-[#4F649B]",
     secondary:
-      "px-6 py-2.5 rounded-xl duration-300 bg-white text-[#4F649B] hover:text-white hover:bg-[#4F649B] hover:underline hover:scale-110",
+      "px-6 py-2.5 rounded-xl duration-300 bg-white border-2 border-[#4F649B] text-[#4F649B] hover:text-white hover:bg-[#4F649B] hover:underline hover:scale-110",
     spotify:
       "px-3 py-2 sm:px-4 sm:py-2.5 md:px-6 md:py-2.5 text-xs lg:text-sm rounded-full duration-300 bg-[#1DB954] text-black font-black hover:opacity-90",
     apple:

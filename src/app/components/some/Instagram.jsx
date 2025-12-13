@@ -1,11 +1,14 @@
 "use client";
+import Link from "next/link";
 import Script from "next/script";
 
 export default function Instagram({ posts }) {
   return (
     <>
       <div>
-        <h2>Instagram</h2>
+        <Link href="https://www.instagram.com/dansermedpiger/" target="_blank">
+          <h4 className="ml-2">Instagram</h4>
+        </Link>
         <div className="overflow-y-hidden w-full overflow-x-auto whitespace-nowrap scrollbar-hide flex gap-2.5 h-150 pb-4">
           <Script
             src="https://www.instagram.com/embed.js"

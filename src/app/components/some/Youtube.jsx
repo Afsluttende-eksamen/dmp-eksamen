@@ -1,9 +1,13 @@
 "use client";
 
+import Link from "next/link";
+
 export default function YouTubeFeed({ videos }) {
   return (
     <div>
-      <h2>YouTube</h2>
+      <Link href="https://www.youtube.com/@DanserMedPiger" target="_blank">
+        <h4 className="ml-2"> YouTube</h4>
+      </Link>
       <div className="flex overflow-x-auto gap-2.5 p-4 whitespace-nowrap scrollbar-hide">
         {videos.map((url, idx) => (
           <iframe

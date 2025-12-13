@@ -4,7 +4,7 @@ import YouTubeFeed from "./Youtube";
 
 export default function SoMeEmbed() {
   return (
-    <div>
+    <div className="grid grid-cols-1 gap-7">
       <Instagram
         posts={[
           "https://www.instagram.com/p/DRkHkAZjHap/",
