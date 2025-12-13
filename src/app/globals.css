@@ -45,11 +45,11 @@ h2 {
 
 h3 {
   font-size: clamp(42px, 4vw, 50px);
-  font-weight: 800;
+  font-weight: 400;
 }
 
 h4 {
-  font-size: clamp(20px, 2.5vw, 22px);
+  font-size: clamp(20px, 2.5vw, 32px);
   font-weight: 600;
 }
 
