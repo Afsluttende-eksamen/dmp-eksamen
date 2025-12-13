@@ -46,7 +46,7 @@ export default function AboutPage() {
         </Button>
       </div> */}
 
-      <h3 className="pb-8">Se hvad der sker bag scenen</h3>
+      <h2 className="pb-8">Se hvad der sker bag scenen</h2>
       <div>
         <SoMeEmbed />
       </div>

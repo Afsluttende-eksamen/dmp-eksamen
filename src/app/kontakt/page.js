@@ -6,7 +6,7 @@ export default function Kontakt() {
   return (
     <div>
       <Navigation />
-      <h1>Kontakt</h1>
+      <h1>KONTAKT</h1>
       <section className="grid grid-cols-2 mb-8">
         <div className="border-r">
           <Image
