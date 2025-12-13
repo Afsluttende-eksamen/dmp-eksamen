@@ -24,22 +24,21 @@ export default function TourForside() {
     
     if (mediaQuery.matches) {
    
-      gsap.fromTo(
+      gsap.set(imageContainer, {
+        width: '40%',
+        height: '60%',
+        left: '5%',
+        top: '20%',
+        borderRadius: '30px',
+      });
+
+      gsap.to(
         imageContainer,
-        {
-          width: '40%',
-          height: '60%',
-          left: '5%',
-          top: '50%',
-          y: '-50%',
-          borderRadius: '30px',
-        },
         {
           width: '100%',
           height: '100%',
           left: '0%',
           top: '0%',
-          y: '0%',
           borderRadius: '0px',
           scrollTrigger: {
             trigger: section,
