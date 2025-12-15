@@ -17,6 +17,8 @@ export default function SoMeEmbed() {
       />
       <TikTokEmbed
         tiktokPosts={[
+          "https://www.tiktok.com/@dansermedpiger/video/7583806874491915542",
+          "https://www.tiktok.com/@dansermedpiger/video/7582973159385664790",
           "https://www.tiktok.com/@dansermedpiger/video/7581542355820432643",
           "https://www.tiktok.com/@dansermedpiger/video/7579660453069016342",
           "https://www.tiktok.com/@dansermedpiger/video/7546601530791660822",
