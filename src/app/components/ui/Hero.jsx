@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 import Button from "./Button";
+import Link from "next/link";
 
 export default function Hero() {
   const scrollIndicatorRef = useRef(null);
@@ -37,7 +38,10 @@ export default function Hero() {
         />
       </div>
       <div>
-        <Link href="https://www.unitedstage.dk/artist/danser-med-piger/">
+        <Link
+          href="https://unitedstage.dk/artister/danser-med-piger/"
+          target="_blank"
+        >
           <Button variant="secondary">BOOK VIA UNITED STAGE</Button>
         </Link>
       </div>
