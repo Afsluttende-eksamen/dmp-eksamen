@@ -3,6 +3,8 @@ import Link from "next/link";
 import Navigation from "../../components/layout/Navigation";
 import AddToCartButton from "@/app/components/webshop/AddToCartButton";
 import { getProductBySlug } from "@/lib/api/products";
+import Button from "@/app/components/ui/Button";
+import { useCartStore } from "@/store/cartStore";
 
 export default async function ProductPage({ params }) {
   const { slug } = await params;

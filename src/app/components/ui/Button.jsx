@@ -7,6 +7,7 @@ export default function Button({
   target,
   rel,
   className = "",
+  onClick,
 }) {
   const variants = {
     primary:
@@ -33,6 +34,8 @@ export default function Button({
   }
 
   return (
-    <button className={`${variants[variant]} ${className}`}>{children}</button>
+    <button onClick={onClick} className={`${variants[variant]} ${className}`}>
+      {children}
+    </button>
   );
 }
