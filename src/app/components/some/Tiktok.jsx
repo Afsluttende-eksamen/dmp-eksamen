@@ -17,7 +17,11 @@ export default function TikTokEmbed({ tiktokPosts }) {
   }, [tiktokPosts]);
   return (
     <div>
-      <Link href="https://www.tiktok.com/@dansermedpiger" target="_blank">
+      <Link
+        href="https://www.tiktok.com/@dansermedpiger"
+        target="_blank"
+        className="hover:underline"
+      >
         <h3 className="ml-2">TikTok</h3>
       </Link>
       <Script src="https://www.tiktok.com/embed.js" strategy="lazyOnload" />

@@ -38,16 +38,10 @@ export default function AboutPage() {
           className="mx-auto my-8"
         />
       </div>
+      <br />
 
-      {/* <div className="text-center my-8">
-        <h4 className="py-4 ">Kom og fest med os!</h4>
-        <Button variant="primary" href="/koncerter">
-          Se koncerter
-        </Button>
-      </div> */}
-
-      <h2>Se hvad der sker bag scenen</h2>
-      <div className="py-8">
+      <h2 className="py-8">Se hvad der sker bag scenen</h2>
+      <div>
         <SoMeEmbed />
       </div>
       <div className="text-center my-10">

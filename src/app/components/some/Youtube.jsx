@@ -5,7 +5,11 @@ import Link from "next/link";
 export default function YouTubeFeed({ videos }) {
   return (
     <div>
-      <Link href="https://www.youtube.com/@DanserMedPiger" target="_blank">
+      <Link
+        href="https://www.youtube.com/@DanserMedPiger"
+        target="_blank"
+        className="hover:underline"
+      >
         <h3 className="ml-2"> YouTube</h3>
       </Link>
       <div className="flex overflow-x-auto gap-2.5 p-4 whitespace-nowrap scrollbar-hide">

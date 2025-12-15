@@ -7,6 +7,7 @@ export default function SoMeEmbed() {
     <div className="grid grid-cols-1 gap-7">
       <Instagram
         posts={[
+          "https://www.instagram.com/p/DSSZ1XaDMI_/",
           "https://www.instagram.com/p/DRkHkAZjHap/",
           "https://www.instagram.com/p/DLe8aEqsvrL/",
           "https://www.instagram.com/p/DKulEPQiGq8/",
@@ -29,11 +30,12 @@ export default function SoMeEmbed() {
       />
       <YouTubeFeed
         videos={[
-          "https://www.youtube.com/embed/7t0W4ANPOUU?si=zXg8nCpHMrU0q-0T",
+          "https://www.youtube.com/embed/cL8sVnBQk7M?si=LzJ7xTtWQCJa3V1X",
           "https://www.youtube.com/embed/47X1M9SYqSw?si=L4yqBHoao88Qh1Q0",
           "https://www.youtube.com/embed/HIrmfSUZ4i4?si=0trDmgt3fyW894cG",
           "https://www.youtube.com/embed/URbWuLjIYaQ?si=N_whjD0DODLwrhsz",
           "https://www.youtube.com/embed/rRG8NDu-CEs?si=8AYM65mBo7H3o2Fh",
+          "https://www.youtube.com/embed/3KX6b7pJQ1o?si=1j1YIY6Y9b5Z2Y4I",
         ]}
       />
     </div>

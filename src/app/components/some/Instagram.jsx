@@ -12,7 +12,11 @@ export default function Instagram({ posts }) {
   return (
     <>
       <div>
-        <Link href="https://www.instagram.com/dansermedpiger/" target="_blank">
+        <Link
+          href="https://www.instagram.com/dansermedpiger/"
+          target="_blank"
+          className="hover:underline"
+        >
           <h3 className="ml-2">Instagram</h3>
         </Link>
         <div className="overflow-y-hidden w-full overflow-x-auto whitespace-nowrap scrollbar-hide flex gap-2.5 h-150 pb-4">
