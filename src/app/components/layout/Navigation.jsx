@@ -1,10 +1,18 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCartShopping,
+  faBars,
+  faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import CartIcon from "../cart/CartIcon";
+import { useState } from "react";
 
 const Navigation = ({ variant = "black" }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const isWhite = variant === "white";
   const textColor = isWhite ? "text-white" : "text-black";
   const logoSrc = isWhite
@@ -12,12 +20,15 @@ const Navigation = ({ variant = "black" }) => {
     : "/svg/dmp-logo-black.svg";
   const linkClass = `px-6 rounded-xl hover:text-[#4F649B] hover:underline transition-all duration-300 ${textColor}`;
 
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="py-1">
-      <div className=" px-4">
+      <div className="px-4">
         <div className="flex items-center justify-between">
-          {/* Left Links */}
-          <div className="flex gap-12">
+          <div className="hidden lg:flex gap-12">
             <Link href="/webshop" className={linkClass}>
               MERCH
             </Link>
@@ -26,7 +37,7 @@ const Navigation = ({ variant = "black" }) => {
             </Link>
           </div>
 
-          <div className="mx-16">
+          <div className="mx-4 lg:mx-16">
             <Link href="/" className="group relative">
               <Image
                 src={logoSrc}
@@ -45,8 +56,7 @@ const Navigation = ({ variant = "black" }) => {
             </Link>
           </div>
 
-          {/* Right Links */}
-          <div className="flex gap-12 items-center justify-center">
+          <div className="hidden lg:flex gap-12 items-center justify-center">
             <Link href="/om-os" className={linkClass}>
               OM OS
             </Link>
@@ -57,7 +67,49 @@ const Navigation = ({ variant = "black" }) => {
               <CartIcon />
             </Link>
           </div>
+
+          <button
+            className="lg:hidden flex items-center"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <FontAwesomeIcon
+              icon={isOpen ? faTimes : faBars}
+              className={`size-6 ${textColor}`}
+            />
+          </button>
         </div>
+
+        {isOpen && (
+          <div className="lg:hidden mt-4 pb-4 flex flex-col gap-4">
+            <Link
+              href="/webshop"
+              className={linkClass}
+              onClick={handleLinkClick}
+            >
+              MERCH
+            </Link>
+            <Link
+              href="/koncerter"
+              className={linkClass}
+              onClick={handleLinkClick}
+            >
+              KONCERTER
+            </Link>
+            <Link href="/om-os" className={linkClass} onClick={handleLinkClick}>
+              OM OS
+            </Link>
+            <Link
+              href="/kontakt"
+              className={linkClass}
+              onClick={handleLinkClick}
+            >
+              KONTAKT
+            </Link>
+            <Link href="/kurv" className={textColor} onClick={handleLinkClick}>
+              <CartIcon />
+            </Link>
+          </div>
+        )}
       </div>
     </nav>
   );

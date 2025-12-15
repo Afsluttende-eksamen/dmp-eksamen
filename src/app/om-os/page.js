@@ -9,13 +9,13 @@ export default function AboutPage() {
   return (
     <div>
       <Navigation />
-      <h1 className="text-center -my-15">OM OS </h1>
+      <h1 className="text-center lg:-my-15">OM OS </h1>
       <Image
         src="/images/img-omhero.jpeg"
-        alt="Description of image"
+        alt="Billede af Danser Med Piger"
         width={1728}
         height={946}
-        className="size-4/5 mx-auto"
+        className="lg:size-4/5 mx-auto"
       />
       <div>
         <p className="max-w-[65ch] mx-auto">
@@ -32,7 +32,7 @@ export default function AboutPage() {
 
         <Image
           src="/svg/dmp2.svg"
-          alt="Description of image"
+          alt="Danser med piger signatur"
           width={400}
           height={370}
           className="mx-auto my-8"
