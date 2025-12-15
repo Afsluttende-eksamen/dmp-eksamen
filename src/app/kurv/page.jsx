@@ -11,6 +11,8 @@ const Cart = () => {
   const cart = useCartStore((state) => state.cart);
   const removeFromCart = useCartStore((state) => state.removeFromCart);
   const clearCart = useCartStore((state) => state.clearCart);
+  const increaseQuantity = useCartStore((state) => state.increaseQuantity);
+  const decreaseQuantity = useCartStore((state) => state.decreaseQuantity);
   const [clearState, setClearState] = useState(0);
 
   const total = cart
@@ -77,7 +79,15 @@ const Cart = () => {
                   </div>
                 </div>
                 <div className="mx-auto">{product.price} DKK</div>
-                <div className="mx-auto">{product.quantity}</div>
+                <div className="mx-auto flex gap-4">
+                  <button onClick={() => increaseQuantity(product.id)}>
+                    +
+                  </button>
+                  {product.quantity}
+                  <button onClick={() => decreaseQuantity(product.id)}>
+                    –
+                  </button>
+                </div>
                 <div className="mx-auto">
                   <p>{product.quantity * product.price} DKK</p>
                 </div>
@@ -103,26 +113,26 @@ const Cart = () => {
                 </p>
                 <button
                   onClick={handleClearCartClick}
-                  className=" cursor-pointer bg-red-700 text-white font-semibold px-4 py-2 rounded-3xl hover:bg-red-800 transition inline-block w-fit "
+                  className=" cursor-pointer bg-red-700 text-white font-semibold px-4 py-2 rounded-xl hover:bg-red-800 transition inline-block w-fit "
                 >
                   Tøm kurven
                 </button>
 
                 {clearState === 1 && (
-                  <div className="absolute top-3/5 mt-2 left-1/2 transform -translate-x-1/2 bg-white rounded-2xl border border-gray-300 shadow-lg p-4  w-64 z-10">
+                  <div className="absolute top-3/5 mt-2 right-0  bg-white rounded-2xl border border-gray-300 shadow-lg p-4  w-64 z-10">
                     <p className="text-center mb-4 font-medium">
                       Er du sikker på, at du vil tømme kurven?
                     </p>
                     <div className="flex justify-center gap-4">
                       <button
                         onClick={handleJa}
-                        className="bg-red-700 text-white px-3 py-1 rounded-3xl hover:bg-red-800 transition"
+                        className="bg-red-700 text-white px-3 py-1 rounded-xl hover:bg-red-800 transition"
                       >
                         Ja
                       </button>
                       <button
                         onClick={handleNej}
-                        className="bg-gray-300 text-gray-800 px-3 py-1 rounded-3xl hover:bg-gray-400 transition"
+                        className="bg-gray-300 text-gray-800 px-3 py-1 rounded-xl hover:bg-gray-400 transition"
                       >
                         Nej
                       </button>
