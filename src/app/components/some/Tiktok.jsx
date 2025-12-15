@@ -4,6 +4,17 @@ import Script from "next/script";
 import { useEffect } from "react";
 
 export default function TikTokEmbed({ tiktokPosts }) {
+  useEffect(() => {
+    const oldScript = document.querySelector(
+      'script[src="https://www.tiktok.com/embed.js"]'
+    );
+    if (oldScript) oldScript.remove();
+
+    const script = document.createElement("script");
+    script.src = "https://www.tiktok.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, [tiktokPosts]);
   return (
     <div>
       <Link href="https://www.tiktok.com/@dansermedpiger" target="_blank">
