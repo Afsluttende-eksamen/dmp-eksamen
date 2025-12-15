@@ -62,7 +62,7 @@ const Cart = () => {
                     >
                       <Image
                         src={product.thumbnail}
-                        alt={product.name}
+                        alt={product.description}
                         width={350}
                         height={350}
                         className="object-cover rounded-xl my-4 w-35 "
@@ -91,12 +91,6 @@ const Cart = () => {
                 <div className="mx-auto">
                   <p>{product.quantity * product.price} DKK</p>
                 </div>
-                {/* <button
-                  onClick={() => removeFromCart(product.id)}
-                  className="cursor-pointer mt-2 hover:underline col-end-6"
-                >
-                  <IoCloseOutline className="size-9" />
-                </button> */}
               </div>
             ))}
 

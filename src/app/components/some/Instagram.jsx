@@ -26,7 +26,7 @@ export default function Instagram({ posts }) {
           />
 
           {posts.map((url) => (
-            <div className="contain-content" key={url}>
+            <div className="contain-content rounded-2xl" key={url}>
               <blockquote
                 key={url}
                 className="relative overflow-hidden -top-15 instagram-media inline-block  mr-4 h-300 w-115 pb-20  rounded-2xl "

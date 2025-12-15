@@ -12,7 +12,7 @@ export default function Kontakt() {
         <div className="border-r">
           <Image
             src="/images/img-suits.jpg"
-            alt="DMP Logo"
+            alt="Billede af Danser Med Piger"
             width={600}
             height={1200}
             className="rounded-3xl mx-auto"
