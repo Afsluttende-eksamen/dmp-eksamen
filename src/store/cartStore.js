@@ -55,14 +55,21 @@ export const useCartStore = create(
           ),
         })),
 
-      decreaseQuantity: (productId) =>
-        set((state) => ({
-          cart: state.cart.map((item) =>
-            item.id === productId
-              ? { ...item, quantity: Math.max(1, item.quantity - 1) }
-              : item
-          ),
-        })),
+      decreaseQuantity: (productId) => {
+        const item = get().cart.find((item) => item.id === productId);
+
+        if (item && item.quantity === 1) {
+          get().removeFromCart(productId);
+        } else {
+          set((state) => ({
+            cart: state.cart.map((item) =>
+              item.id === productId
+                ? { ...item, quantity: item.quantity - 1 }
+                : item
+            ),
+          }));
+        }
+      },
 
       clearCart: () => set({ cart: [] }),
 
