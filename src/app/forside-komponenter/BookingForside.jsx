@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Button from '../components/ui/Button';
 import BookingItem from './BookingItem';
+import Link from 'next/link';
 
 export default function BookingForside() {
   return (
@@ -18,9 +19,9 @@ export default function BookingForside() {
             <BookingItem number="3" text="Private arrangementer" />
           </div>
           <div className="flex justify-center md:justify-end">
-            <a href="https://unitedstage.dk/artister/danser-med-piger/" target="_blank" rel="noreferrer">
+            <Link href="https://unitedstage.dk/artister/danser-med-piger/" target="_blank" rel="noreferrer">
               <Button variant="primary">KONTAKT NU</Button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
