@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="flex flex-col items-center gap-8">
+    <div className="flex flex-col items-center gap-8 contain-content">
       <div className="mb-6 md:mb-12 pt-12">
         <Image
           src="/svg/dmp-logo-white.svg"

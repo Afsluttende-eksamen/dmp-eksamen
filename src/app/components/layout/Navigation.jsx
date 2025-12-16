@@ -17,13 +17,14 @@ const Navigation = ({ variant = "black" }) => {
   const isWhite = variant === "white";
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const textColor = isWhite ? "text-white " : "text-black";
-  const homeColor = isHome ? "text-white " : textColor;
-
+  const textColor = isWhite || isHome ? "text-white " : "text-black";
+  const burgerHome = isHome
+    ? "lg:hidden mt-4 pb-4 absolute flex flex-col gap-4 "
+    : "lg:hidden mt-4 pb-4  flex flex-col gap-4 ";
   const logoSrc =
     isWhite || isHome ? "/svg/dmp-logo-white.svg" : "/svg/dmp-logo-black.svg";
-  const linkClass = ` rounded-xl text-nowrap hover:text-[#4F649B] hover:underline transition-all duration-300 ${homeColor} ${textColor}`;
-
+  const linkClass = ` rounded-xl text-nowrap hover:text-[#4F649B] hover:underline transition-all duration-300  ${textColor}`;
+  const burgerClass = `${burgerHome}`;
   const handleLinkClick = () => {
     setIsOpen(false);
   };
@@ -90,7 +91,7 @@ const Navigation = ({ variant = "black" }) => {
         </div>
 
         {isOpen && (
-          <div className="lg:hidden mt-4 pb-4 flex flex-col gap-4">
+          <div className={burgerClass}>
             <Link
               href="/webshop"
               className={linkClass}

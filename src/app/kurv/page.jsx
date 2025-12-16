@@ -34,7 +34,6 @@ const Cart = () => {
 
   return (
     <div>
-      <Navigation />
       <h1 className="place-self-center">KURV</h1>
       <div className="max-w-4xl mx-auto mb-10">
         {cart.length === 0 ? (
