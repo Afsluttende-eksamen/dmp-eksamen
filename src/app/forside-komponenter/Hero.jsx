@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
-import Button from "../components/ui/Button";
+import Button from "./Button";
 import Link from "next/link";
 
 export default function Hero() {

@@ -69,4 +69,5 @@ p {
 
 button {
   cursor: pointer;
+  font-size: clamp(14px, 2.5vw, 18px);
 }

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Button from "../components/ui/Button";
 import ListItem from "./ListItem";
+import Link from "next/link";
 
 export default function TourForside() {
   return (
@@ -23,14 +24,13 @@ export default function TourForside() {
           <div className="flex flex-col gap-6 mb-12">
             <ListItem
               venue="VEGA"
-              location="Copenhagen"
+              location="København"
               date="15. MAR"
-              ticketLink="#"
             />
             <ListItem venue="TRAIN" location="Aarhus" date="22. MAR" />
             <ListItem
-              venue="STUDENTERHUSET"
-              location="Aalborg"
+              venue="TIVOLI"
+              location="København"
               date="29. MAR"
             />
             <ListItem
@@ -40,9 +40,9 @@ export default function TourForside() {
             />
           </div>
           <div className="flex justify-center md:justify-start">
-            <a href="/concerts">
+            <Link href="/concerts">
               <Button variant="primary">SE ALLE KONCERTER</Button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

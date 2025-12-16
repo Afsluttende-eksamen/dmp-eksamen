@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "../components/ui/Button";
 import Link from "next/link";
 
 export default function ListItem({ venue, location, date, ticketLink = "#" }) {
@@ -12,7 +12,7 @@ export default function ListItem({ venue, location, date, ticketLink = "#" }) {
           </p>
         </div>
 
-        <Link className="ml-auto" href={ticketLink}>
+        <Link href={ticketLink}>
           <Button variant="secondary"> KØB BILLET</Button>
         </Link>
       </div>

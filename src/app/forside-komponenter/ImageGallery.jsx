@@ -16,23 +16,22 @@ export default function ImageGallery() {
   ];
 
   return (
-    <section className="bg-white mx-20 py-16">
-      <div className="px-8">
+    <section className="bg-white mx-4 sm:mx-8 md:mx-20 py-16">
+      <div className="px-4 md:px-8">
 
-        <div className="flex justify-start mb-12">
+        <div className="flex flex-col justify-center text-center mb-12">
           <h1>GALLERI</h1>
+           <h2 className="text-black/80">Følg med i hvad vi laver</h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-          {/* Stort billede til venstre */}
-          <div className="relative overflow-hidden rounded-3xl md:col-span-2 md:row-span-2">
-       
-             <video src={videos[0]} controls className="w-full h-full object-cover rounded-3xl"></video>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          {/* Video */}
+          <div className="overflow-hidden rounded-3xl md:col-span-2 md:row-span-2">
+             <video src={videos[0]} controls className="w-full h-full min-h-[200px] object-cover rounded-3xl"></video>
           </div>
 
-  
-          {/* Billeder øverste til højre */}
-          <div className="relative overflow-hidden rounded-3xl group">
+          {/* Billede */}
+          <div className="overflow-hidden rounded-3xl group">
             <Image
               src={images[1]}
               alt="Gallery"
@@ -40,21 +39,20 @@ export default function ImageGallery() {
               height={600}
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
             />
-           
           </div>
-             <div className="flex flex-col bg-[#4F649B] justify-between p-6 rounded-3xl">
-            <h4  className="text-4xl md:text-6xl mb-12 text-white">
+
+          {/* CTA-boks */}
+          <div className="flex flex-col bg-[#4F649B] justify-between p-4 md:p-6 rounded-3xl">
+            <h4 className="text-lg sm:text-xl md:text-4xl lg:text-6xl mb-4 md:mb-12 text-white">
               Udforsk hele vores galleri med billeder fra shows, backstage og meget mere.
             </h4>
             <Link href="/gallery">
               <Button variant="secondary">TIL GALLERIET</Button>
             </Link>
           </div>
-     
 
-      
-          {/* Lille billede til venstre nederst */}
-          <div className="relative overflow-hidden rounded-3xl group">
+          {/* Billede */}
+          <div className="overflow-hidden rounded-3xl group">
             <Image
               src={images[3]}
               alt="Gallery"
@@ -64,8 +62,8 @@ export default function ImageGallery() {
             />
           </div>
 
-          {/* Stort billede til højre nederst */}
-          <div className="relative overflow-hidden rounded-3xl md:col-span-2 md:row-span-2 group">
+          {/* Stort billede */}
+          <div className="overflow-hidden rounded-3xl md:col-span-2 md:row-span-2 group">
             <Image
               src={images[4]}
               alt="Gallery"
@@ -73,11 +71,10 @@ export default function ImageGallery() {
               height={900}
               className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
             />
-            
           </div>
 
-          {/* Boksen med CTA-knap */}
-               <div className="relative overflow-hidden rounded-3xl group">
+          {/* Billede */}
+          <div className="overflow-hidden rounded-3xl group">
             <Image
               src={images[0]}
               alt="Gallery"
