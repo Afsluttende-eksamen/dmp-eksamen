@@ -16,7 +16,7 @@ export default function Home() {
         autoPlay
         loop
         muted
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 -z-100 left-0 w-full h-full object-cover"
       >
         <source src="/videos/dmp-landing-video.mp4" type="video/mp4" />
       </video>

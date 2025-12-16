@@ -3,32 +3,13 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
-import Button from "./Button";
+import Button from "../components/ui/Button";
 import Link from "next/link";
 
 export default function Hero() {
-  const scrollIndicatorRef = useRef(null);
-
-  useEffect(() => {
-    gsap.to(scrollIndicatorRef.current, {
-      y: 30,
-      repeat: -1,
-      yoyo: true,
-      duration: 0.8,
-      ease: "power1.inOut",
-    });
-  }, []);
-
-  const scrollToNextSection = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <div className="flex flex-col items-center gap-8">
-      <div className="mb-12">
+      <div className="mb-12 pt-12">
         <Image
           src="/svg/dmp-logo-white.svg"
           alt="DMP Logo"
