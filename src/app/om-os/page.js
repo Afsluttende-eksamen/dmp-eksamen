@@ -7,10 +7,10 @@ import Button from "../components/ui/Button";
 
 export default function AboutPage() {
   return (
-    <div >
+    <div>
       <Navigation />
-      <div className="py-16">
-      <h1 className=" mb-0 text-center ">OM OS </h1>
+      <div className="pt-16">
+        <h1 className="leading-none mb-0 text-center ">OM OS </h1>
       </div>
       <Image
         src="/images/img-omhero.webp"
@@ -41,10 +41,9 @@ export default function AboutPage() {
         />
       </div>
       <br />
-      
-     
+
       <h2 className="py-8 px-4 text-left">Se hvad der sker bag scenen</h2>
-     
+
       <div className="px-2 md:px-8">
         <SoMeEmbed />
       </div>
