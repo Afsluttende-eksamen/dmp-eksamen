@@ -49,7 +49,7 @@ export default function BentoSektion() {
               <h4 className="text-lg sm:text-xl md:text-4xl lg:text-6xl mb-4 md:mb-12 text-white">
                 Udforsk hele vores galleri med billeder fra shows, backstage og meget mere.
               </h4>
-              <Link href="/gallery">
+              <Link href="/galleri">
                 <Button variant="secondary">TIL GALLERIET</Button>
               </Link>
             </div>
