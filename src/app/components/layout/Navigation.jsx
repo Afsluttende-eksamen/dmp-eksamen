@@ -18,17 +18,17 @@ const Navigation = ({ variant = "black" }) => {
   const logoSrc = isWhite
     ? "/svg/dmp-logo-white.svg"
     : "/svg/dmp-logo-black.svg";
-  const linkClass = `px-6 rounded-xl hover:text-[#4F649B] hover:underline transition-all duration-300 ${textColor}`;
+  const linkClass = ` rounded-xl text-nowrap hover:text-[#4F649B] hover:underline transition-all duration-300 ${textColor}`;
 
   const handleLinkClick = () => {
     setIsOpen(false);
   };
 
   return (
-    <nav className="py-1">
-      <div className="px-4">
-        <div className="flex items-center justify-between">
-          <div className="hidden lg:flex gap-12">
+    <nav className="py-1 max-w-dvw">
+      <div className="px-[2dvw]">
+        <div className="flex items-center justify-between lg:justify-evenly ">
+          <div className="hidden lg:flex gap-[3dvw]">
             <Link href="/webshop" className={linkClass}>
               MERCH
             </Link>
@@ -37,7 +37,7 @@ const Navigation = ({ variant = "black" }) => {
             </Link>
           </div>
 
-          <div className="mx-4 lg:mx-16">
+          <div className="mx-4 lg:mx-14 min-h-[60px] min-w-10">
             <Link href="/" className="group relative">
               <Image
                 src={logoSrc}
@@ -56,7 +56,7 @@ const Navigation = ({ variant = "black" }) => {
             </Link>
           </div>
 
-          <div className="hidden lg:flex gap-12 items-center justify-center">
+          <div className="hidden lg:flex gap-[3dvw] items-center justify-center">
             <Link href="/om-os" className={linkClass}>
               OM OS
             </Link>
@@ -68,7 +68,7 @@ const Navigation = ({ variant = "black" }) => {
             </Link>
           </div>
 
-          <div className="lg:hidden flex items-center gap-4">
+          <div className="lg:hidden flex items-center ">
             <Link href="/kurv" className={textColor}>
               <CartIcon />
             </Link>
@@ -78,7 +78,8 @@ const Navigation = ({ variant = "black" }) => {
             >
               <FontAwesomeIcon
                 icon={isOpen ? faTimes : faBars}
-                className={`size-6 ${textColor}`}
+                className={` ${textColor}`}
+                size="2x"
               />
             </button>
           </div>
