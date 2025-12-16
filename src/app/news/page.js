@@ -16,7 +16,7 @@ export default async function News() {
 
   return (
     <div>
-      <Navigation />
+   
       <NewsList posts={post} categories={categories} />
     </div>
   );

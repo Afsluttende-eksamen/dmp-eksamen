@@ -45,12 +45,12 @@ export default function BentoSektion() {
 
           {/* CTA-boks */}
           <MediaSlot>
-            <div className="flex flex-col bg-[#4F649B] justify-between p-4 md:p-6 h-full rounded-3xl">
+            <div className="flex flex-col bg-black justify-between p-4 md:p-6 h-full rounded-3xl">
               <h4 className="text-lg sm:text-xl md:text-4xl lg:text-6xl mb-4 md:mb-12 text-white">
                 Udforsk hele vores galleri med billeder fra shows, backstage og meget mere.
               </h4>
               <Link href="/galleri">
-                <Button variant="secondary">TIL GALLERIET</Button>
+                <Button variant="primary">TIL GALLERIET</Button>
               </Link>
             </div>
           </MediaSlot>

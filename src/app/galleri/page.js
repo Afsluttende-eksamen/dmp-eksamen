@@ -13,10 +13,100 @@ export default function Gallery() {
 
       
       <div className="mx-4 sm:mx-8 md:mx-20 py-16">
-        <div className="text-center mb-12">
+        <div className="text-center mb-0">
           <h1>GALLERI</h1>
-          <h2 className="text-black/80 text-center">Følg med i hvad vi laver</h2>
         </div>
+
+             <h3 className="py-6">Live</h3>
+       <MediaGrid>
+          <MediaSlot>
+            <Image
+              src="/images/live/live-8.webp"
+              alt="Galleri billede"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+          <MediaSlot size="large">
+            <Image
+              src="/images/live/live-cool.webp"
+              alt="Galleri billede"
+              width={1600}
+              height={900}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+          <MediaSlot>
+            <Image
+              src="/images/live/live-9.webp"
+              alt="Galleri billede"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+        </MediaGrid>
+          <div className="my-6"></div>
+        <MediaGrid>
+          <MediaSlot size="large">
+            <Image
+              src="/images/live/live-2.webp"
+              alt="Galleri billede"
+              width={1600}
+              height={900}
+              className="w-full h-full object-cover object-[50%_20%]  hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+          <MediaSlot>
+            <Image
+              src="/images/live/live-1.webp"
+              alt="Galleri billede"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+          <MediaSlot>
+            <Image
+              src="/images/live/live-7.webp"
+              alt="Galleri billede"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+        </MediaGrid>
+          <div className="my-6"></div>
+          <MediaGrid>
+          <MediaSlot>
+            <Image
+              src="/images/live/live-5.webp"
+              alt="Galleri billede"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover  hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+          <MediaSlot size="large">
+            <Image
+              src="/images/live/live-4.webp"
+              alt="Galleri billede"
+              width={1600}
+              height={900}
+              className="w-full h-full object-cover object-[50%_20%] hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+          <MediaSlot>
+            <Image
+              src="/images/live/live-6.webp"
+              alt="Galleri billede"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+        </MediaGrid>
           <h3 className="py-6 md:pt-16">Studio</h3>
         <MediaGrid>
           <MediaSlot size="large">
@@ -139,9 +229,9 @@ export default function Gallery() {
             />
           </MediaSlot>
         </MediaGrid>
-      </div>
 
-    
+     
+      </div>
     </div>
   );
 }
