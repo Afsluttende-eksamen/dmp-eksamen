@@ -1,10 +1,11 @@
 import Navigation from "./components/layout/Navigation";
-import Hero from "./forside-komponenter/Hero";
-import ImageGallery from "./forside-komponenter/ImageGallery";
-import NyhederForside from "./forside-komponenter/NyhederForside";
-import Booking from "./forside-komponenter/BookingForside";
-import SpotifyArtistSection from "./forside-komponenter/spotify/SpotifyArtistSection";
-import TourForside from "./forside-komponenter/TourForside";
+import Hero from "./components/forside-komponenter/Hero";
+import BentoSektion from "./components/forside-komponenter/BentoSektion";
+import NyhederForside from "./components/forside-komponenter/NyhederForside";
+import Booking from "./components/forside-komponenter/BookingForside";
+import SpotifyArtistSection from "./components/forside-komponenter/spotify/SpotifyArtistSection";
+import TourForside from "./components/forside-komponenter/TourForside";
+import BackgroundSection from "./components/forside-komponenter/BackgroundSection";
 
 export default function Home() {
   const featuredArtistId = process.env.SPOTIFY_ARTIST_ID;
@@ -29,10 +30,11 @@ export default function Home() {
         </div>
       </section>
       <NyhederForside />
-      <TourForside />
+      {/* <TourForside /> */}
+      <BackgroundSection />
       <Booking />
       <SpotifyArtistSection artistId={featuredArtistId} />
-      <ImageGallery />
+      <BentoSektion />
     </main>
   );
 }

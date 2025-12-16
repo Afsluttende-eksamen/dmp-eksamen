@@ -21,12 +21,12 @@ export default function SpotifyArtistSection({
   return (
     <section className="w-full bg-black px-4 md:px-8 py-16">
       <div className="pb-16  flex flex-col items-start mx-4 justify-left text-white">
-        <h1>MUSIK</h1>
+       {/*  <h1>MUSIK</h1> */}
         <h2 className="text-white/80 md:text-left">Find os på Spotify og Apple Music</h2>
       </div>
 
       <div>
-          <div className="flex h-100 md:h-140 items-center overflow-x-auto gap-2.5 whitespace-nowrap scrollbar-hide">
+          <div className="flex h-100 md:h-115 items-top overflow-x-auto gap-2.5 whitespace-nowrap scrollbar-hide">
             {tracks.map((track) => (
               <TrackCard key={track.id} track={track} />
             ))}

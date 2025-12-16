@@ -24,11 +24,12 @@ export default function Concerts() {
 
     
       <section className="relative z-10 flex flex-col items-center justify-center px-4 py-16">
-     
-        <h1 className="text-black mb-12">
+
+   
+        <h1 className="text-black mb-12 ">
           KOMMENDE KONCERTER
         </h1>
-        
+
  
         <div className="w-full">
           <ConcertList concerts={concerts} />

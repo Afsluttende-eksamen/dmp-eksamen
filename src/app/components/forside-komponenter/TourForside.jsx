@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Button from "../components/ui/Button";
+import Button from "../ui/Button";
 import ListItem from "./ListItem";
 import Link from "next/link";
 import { concerts } from "@/lib/data/concerts";

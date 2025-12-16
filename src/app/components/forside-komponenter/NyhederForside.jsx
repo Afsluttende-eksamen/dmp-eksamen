@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import Button from "../components/ui/Button";
-import NewsCard from "../components/news/NewsCard";
+import Button from "../ui/Button";
+import NewsCard from "../news/NewsCard";
 import { getNews } from "@/lib/api/news";
 
 export default function NyhederForside() {
