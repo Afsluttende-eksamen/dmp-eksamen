@@ -68,15 +68,20 @@ const Navigation = ({ variant = "black" }) => {
             </Link>
           </div>
 
-          <button
-            className="lg:hidden flex items-center"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <FontAwesomeIcon
-              icon={isOpen ? faTimes : faBars}
-              className={`size-6 ${textColor}`}
-            />
-          </button>
+          <div className="lg:hidden flex items-center gap-4">
+            <Link href="/kurv" className={textColor}>
+              <CartIcon />
+            </Link>
+            <button
+              className="flex items-center"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <FontAwesomeIcon
+                icon={isOpen ? faTimes : faBars}
+                className={`size-6 ${textColor}`}
+              />
+            </button>
+          </div>
         </div>
 
         {isOpen && (
@@ -104,9 +109,6 @@ const Navigation = ({ variant = "black" }) => {
               onClick={handleLinkClick}
             >
               KONTAKT
-            </Link>
-            <Link href="/kurv" className={textColor} onClick={handleLinkClick}>
-              <CartIcon />
             </Link>
           </div>
         )}
