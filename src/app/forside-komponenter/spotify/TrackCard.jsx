@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Button from "../ui/Button";
+import Button from "../../components/ui/Button";
 import SpotifyEmbed from "./SpotifyEmbed";
 
 export default function TrackCard({ track }) {
@@ -11,13 +11,13 @@ export default function TrackCard({ track }) {
   const appleMusicSearchUrl = `https://music.apple.com/dk/search?term=${trackName}%20${artistName}`;
 
   return (
-    <div className="flex flex-col items-center lg:w-100 lg:h-100 md:w-80 md:h-120 gap-5 rounded-2xl px-5 py-5text-white transition-transform duration-200 hover:scale-105">
+    <div className="flex flex-col items-center w-full h-full lg:w-100 lg:h-100 md:w-80 md:h-120 gap-5 rounded-2xl text-white px-4">
       <Image
         src={track.album.images[0].url}
         alt={track.name}
         width={track.album.images[0].width}
         height={track.album.images[0].height}
-        className="lg:h-100 lg:w-100 md:w-80 md:h-80 w-70 h-70  rounded-xl object-cover"
+        className="w-100 h-100 rounded-xl object-cover"
       />
       <SpotifyEmbed trackId={trackId} />
       <div className="flex gap-3">

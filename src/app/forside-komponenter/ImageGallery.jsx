@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Button from './Button';
+import Button from '../components/ui/Button';
 
 export default function ImageGallery() {
   const images = [
@@ -26,14 +26,7 @@ export default function ImageGallery() {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
           {/* Stort billede til venstre */}
           <div className="relative overflow-hidden rounded-3xl md:col-span-2 md:row-span-2">
-            {/* <Image
-              src={images[2]}
-              alt="Gallery"
-              width={1600}
-              height={900}
-              priority
-              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-            /> */}
+       
              <video src={videos[0]} controls className="w-full h-full object-cover rounded-3xl"></video>
           </div>
 

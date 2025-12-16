@@ -1,14 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import Button from './Button';
+import Button from '../components/ui/Button';
 import BookingItem from './BookingItem';
 
 export default function BookingForside() {
   return (
     <section className="bg-white grid md:grid-cols-2 gap-1 py-20">
-      <div className="flex items-center justify-center md:justify-start text-black px-4 md:px-8">
-        <div className="w-full max-w-2xl py-0 md:py-16">
+      <div className="flex items-center justify-center md:justify-start px-4 md:px-8">
+        <div className="py-0 md:py-16">
           <h2 className="mb-8 md:mb-12 md:text-left text-center">
             BOOK DANSER MED PIGER TIL
           </h2>
