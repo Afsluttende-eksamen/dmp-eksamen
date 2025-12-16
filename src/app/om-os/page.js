@@ -9,7 +9,7 @@ export default function AboutPage() {
   return (
     <div>
       <Navigation />
-      <h1 className="text-center lg:-my-15">OM OS </h1>
+      <h1 className="leading-none mb-0 text-center ">OM OS </h1>
       <Image
         src="/images/img-omhero.jpeg"
         alt="Billede af Danser Med Piger"
