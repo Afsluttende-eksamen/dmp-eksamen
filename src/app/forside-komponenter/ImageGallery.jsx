@@ -4,11 +4,11 @@ import Button from '../components/ui/Button';
 
 export default function ImageGallery() {
   const images = [
-    '/images/img-1.jpg',
-    '/images/img-2.jpg',
-    '/images/img-4.jpg',
-    '/images/img-5.jpg',
-    '/images/img-9.jpg',
+    '/images/img-1.webp',
+    '/images/img-2.webp',
+    '/images/img-4.webp',
+    '/images/img-5.webp',
+    '/images/img-9.webp',
   ];
 
   const videos = [

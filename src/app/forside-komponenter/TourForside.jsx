@@ -12,7 +12,7 @@ export default function TourForside() {
     <section className="bg-black grid md:grid-cols-2 gap-1 py-20 px-0 md:px-8">
       <div className="flex justify-center items-center p-8">
         <Image
-          src="/images/img-beach.jpg"
+          src="/images/img-beach.webp"
           alt="img-beach"
           width={800}
           height={600}
@@ -24,7 +24,7 @@ export default function TourForside() {
           <h2 className="mb-8 md:mb-12 md:text-left text-center">
             TOURPLAN 2025
           </h2>
-          <div className="flex flex-col gap-6 mb-12">
+          <div className="flex flex-col pt-4 gap-6 mb-12">
             {upcomingConcerts.map((concert, i) => (
               <ListItem
                 key={i}

@@ -13,7 +13,7 @@ export default function AboutPage() {
         <h1 className="leading-none mb-0 text-center ">OM OS </h1>
       </div>
       <Image
-        src="/images/img-omhero.jpeg"
+        src="/images/img-omhero.webp"
         alt="Billede af Danser Med Piger"
         width={1728}
         height={946}
