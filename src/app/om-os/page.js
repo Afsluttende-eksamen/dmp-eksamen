@@ -1,4 +1,3 @@
-import Navigation from "../components/layout/Navigation";
 import Image from "next/image";
 import Spotify from "../components/some/Spotify";
 import SoMeEmbed from "../components/some/SoMeEmbed";
@@ -8,7 +7,6 @@ import Button from "../components/ui/Button";
 export default function AboutPage() {
   return (
     <div>
-      <Navigation />
       <div className="pt-16">
         <h1 className="leading-none mb-0 text-center ">OM OS </h1>
       </div>

@@ -1,6 +1,6 @@
 import { Archivo, Newsreader } from "next/font/google";
 import "./globals.css";
-import Navigation from "./components/layout/Navigation";
+import NavigationWrapper from "./components/layout/NavigationWrapper";
 import Footer from "./components/layout/Footer";
 
 const archivo = Archivo({
@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${archivo.variable} ${newsreader.variable} antialiased`}
       >
+        <NavigationWrapper />
         {children}
         <Footer />
       </body>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartShopping,
@@ -14,19 +15,22 @@ import { useState } from "react";
 const Navigation = ({ variant = "black" }) => {
   const [isOpen, setIsOpen] = useState(false);
   const isWhite = variant === "white";
-  const textColor = isWhite ? "text-white" : "text-black";
-  const logoSrc = isWhite
-    ? "/svg/dmp-logo-white.svg"
-    : "/svg/dmp-logo-black.svg";
-  const linkClass = ` rounded-xl text-nowrap hover:text-[#4F649B] hover:underline transition-all duration-300 ${textColor}`;
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const textColor = isWhite ? "text-white " : "text-black";
+  const homeColor = isHome ? "text-white " : textColor;
+
+  const logoSrc =
+    isWhite || isHome ? "/svg/dmp-logo-white.svg" : "/svg/dmp-logo-black.svg";
+  const linkClass = ` rounded-xl text-nowrap hover:text-[#4F649B] hover:underline transition-all duration-300 ${homeColor} ${textColor}`;
 
   const handleLinkClick = () => {
     setIsOpen(false);
   };
 
   return (
-    <nav className="py-1 max-w-dvw">
-      <div className="px-[2dvw]">
+    <nav>
+      <div className="">
         <div className="flex items-center justify-between lg:justify-evenly ">
           <div className="hidden lg:flex gap-[3dvw]">
             <Link href="/webshop" className={linkClass}>
