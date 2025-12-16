@@ -12,7 +12,7 @@ export default function TourForside() {
     <section className="bg-black grid md:grid-cols-2 gap-1 py-20 px-0 md:px-8">
       <div className="flex justify-center items-center p-8">
         <Image
-          src="/images/img-beach.jpg"
+          src="/images/img-beach.webp"
           alt="img-beach"
           width={800}
           height={600}

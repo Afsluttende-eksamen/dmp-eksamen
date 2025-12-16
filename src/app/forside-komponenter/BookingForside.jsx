@@ -26,7 +26,7 @@ export default function BookingForside() {
       </div>
       <div className="flex justify-center items-center p-8">
         <Image
-          src="/images/band-wagon.jpg"
+          src="/images/band-wagon.webp"
           alt="band-wagon"
           width={800}
           height={600}

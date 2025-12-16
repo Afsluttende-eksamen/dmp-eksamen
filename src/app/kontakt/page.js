@@ -12,7 +12,7 @@ export default function Kontakt() {
       <section className="grid grid-cols-1 md:grid-cols-2 mb-8 max-w-6xl mx-auto px-4 md:px-0 gap-8 md:gap-0">
         <div className="md:border-r md:pr-8 ">
           <Image
-            src="/images/img-suits.jpg"
+            src="/images/img-suits.webp"
             alt="Billede af Danser Med Piger"
             width={600}
             height={1200}

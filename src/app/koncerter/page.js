@@ -9,7 +9,7 @@ export default function Concerts() {
     <div className="relative min-h-screen">
       <div className="fixed inset-0 z-0">
         <Image
-          src="/images/koncerter-bg.jpg"
+          src="/images/koncerter-bg.webp"
           alt="Concert crowd"
           fill
           className="object-cover"
