@@ -41,7 +41,7 @@ export default function TourForside() {
           </div>
           <div className="flex justify-center md:justify-start">
             <Link href="/concerts">
-              <Button variant="primary">SE ALLE KONCERTER</Button>
+              <Button variant="primary">ALLE KONCERTER</Button>
             </Link>
           </div>
         </div>

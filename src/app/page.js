@@ -11,34 +11,28 @@ export default function Home() {
 
   return (
     <main>
-
-      <video
-        autoPlay
-        loop
-        muted
-        className="absolute top-0 -z-100 left-0 w-full h-full object-cover"
-      >
-        <source src="/videos/dmp-landing-video.mp4" type="video/mp4" />
-      </video>
-      <div className="relative z-10 flex flex-col h-full">
-        <Navigation variant="white" />
-        <main className="flex-1 flex items-end justify-center pb-32">
-          <Hero />
-        </main>
-
-
-        <NyhederForside />
-
-        <TourForside />
-        <Booking />
-
-        <SpotifyArtistSection artistId={featuredArtistId} />
-
-        <ImageGallery />
-
-
-      </div>
-
+      <section className="relative h-screen">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        >
+          <source src="/videos/dmp-landing-video.mp4" type="video/mp4" />
+        </video>
+        <div className="relative z-10 flex flex-col h-full">
+          <Navigation variant="white" />
+          <div className="flex-1 flex items-end justify-center pb-16">
+            <Hero />
+          </div>
+        </div>
+      </section>
+      <NyhederForside />
+      <TourForside />
+      <Booking />
+      <SpotifyArtistSection artistId={featuredArtistId} />
+      <ImageGallery />
     </main>
   );
 }

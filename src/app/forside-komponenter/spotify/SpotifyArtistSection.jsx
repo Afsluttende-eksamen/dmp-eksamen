@@ -20,9 +20,9 @@ export default function SpotifyArtistSection({
 
   return (
     <section className="w-full bg-black px-4 md:px-8 py-16">
-      <div className="pb-16 flex flex-col items-start md:mx-4 justify-left text-white">
+      <div className="pb-16  flex flex-col items-start mx-4 justify-left text-white">
         <h1>MUSIK</h1>
-        <h2 className="text-white/80">Find os på Spotify og Apple Music</h2>
+        <h2 className="text-white/80 md:text-left">Find os på Spotify og Apple Music</h2>
       </div>
 
       <div>

@@ -21,7 +21,7 @@ export default function ImageGallery() {
 
         <div className="flex flex-col justify-center text-center mb-12">
           <h1>GALLERI</h1>
-           <h2 className="text-black/80">Følg med i hvad vi laver</h2>
+           <h2 className="text-black/80 text-center">Følg med i hvad vi laver</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">

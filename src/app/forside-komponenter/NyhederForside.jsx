@@ -35,7 +35,7 @@ export default function NyhederForside() {
   }, []);
 
   return (
-    <section className=" py-16 md:py-32">
+    <section className="py-16">
       <div className="px-8 mb-4">
         <h1>SENESTE NYT</h1>
       </div>
@@ -43,7 +43,7 @@ export default function NyhederForside() {
       <div className="px-8">
         {loading ? (
           <div className="flex justify-center items-center">
-            <h3 className="">Indlæser nyheder...</h3>
+            <h3 className="">Indlæser content...</h3>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -57,7 +57,7 @@ export default function NyhederForside() {
 
         <div className="flex items-center justify-center mt-8">
           <Link href="/news">
-            <Button variant="primary">SE ALLE</Button>
+            <Button variant="primary">ALLE NYHEDER</Button>
           </Link>
         </div>
       </div>
