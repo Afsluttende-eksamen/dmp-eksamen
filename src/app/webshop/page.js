@@ -8,12 +8,10 @@ export default async function Webshop() {
   return (
     <div className=" bg-white">
       <Navigation />
-
-      <div className="mx-12">
-
+      <div className="mx-8 py-16">
         <h1>MERCH</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-col md:flex-row justify-center md:justify-start gap-8">
           {products.map((product) => (
             <ProductCard key={product.slug} product={product}  />
           ))}

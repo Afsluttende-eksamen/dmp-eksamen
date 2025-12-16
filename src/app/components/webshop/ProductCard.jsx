@@ -4,7 +4,7 @@ import AddToCartButton from "@/app/components/webshop/AddToCartButton";
 
 export default function ProductCard({ product }) {
   return (
-    <div className="my-12 w-100 p-4 rounded-2xl hover:shadow-xl">
+    <div className="my-12 w-full md:w-80 h-auto p-4 rounded-2xl hover:shadow-xl">
       <Link href={`/webshop/${product.slug}`}>
         <div className="flex justify-center">
           <Image
@@ -15,8 +15,8 @@ export default function ProductCard({ product }) {
             className="rounded-md object-cover hover:scale-105"
           />
         </div>
-        <h4 className="mt-2 text-lg font-semibold">{product.name}</h4>
-        <p className="text-sm text-gray-600">{product.description}</p>
+        <h4 className="mt-2">{product.name}</h4>
+        <p className="text-sm text-black/80">{product.description}</p>
       </Link>
 
       <div className="mt-3  flex items-center justify-between">

@@ -9,7 +9,7 @@ export default function Spotify() {
           data-testid="embed-iframe"
           style={{ borderRadius: "12px" }}
           src="https://open.spotify.com/embed/artist/0OhwwB6b7ugDTS41UT4YJS?utm_source=generator"
-          width="50%"
+          width="80%"
           height="500"
           //   frameBorder="0"
           //   allowfullscreen=""

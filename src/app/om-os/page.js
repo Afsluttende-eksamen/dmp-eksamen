@@ -7,9 +7,11 @@ import Button from "../components/ui/Button";
 
 export default function AboutPage() {
   return (
-    <div>
+    <div >
       <Navigation />
-      <h1 className="leading-none mb-0 text-center ">OM OS </h1>
+      <div className="py-16">
+      <h1 className=" mb-0 text-center ">OM OS </h1>
+      </div>
       <Image
         src="/images/img-omhero.jpeg"
         alt="Billede af Danser Med Piger"
@@ -17,7 +19,7 @@ export default function AboutPage() {
         height={946}
         className="lg:size-4/5 mx-auto"
       />
-      <div>
+      <div className="px-8">
         <p className="max-w-[65ch] mx-auto">
           Vi er fem venner, der har delt kærligheden for musik siden barndommen.
           Vi voksede op med instrumenter i hænderne og et øvelokale, der hurtigt
@@ -39,9 +41,11 @@ export default function AboutPage() {
         />
       </div>
       <br />
-
-      <h2 className="py-8">Se hvad der sker bag scenen</h2>
-      <div>
+      
+     
+      <h2 className="py-8 px-4 text-left">Se hvad der sker bag scenen</h2>
+     
+      <div className="px-2 md:px-8">
         <SoMeEmbed />
       </div>
       <div className="text-center my-10">

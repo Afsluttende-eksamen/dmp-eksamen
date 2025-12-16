@@ -23,9 +23,9 @@ export default function Concerts() {
       </div>
 
     
-      <section className="relative z-10 flex flex-col items-center justify-center px-4 py-10">
+      <section className="relative z-10 flex flex-col items-center justify-center px-4 py-16">
      
-        <h1 className="text-black lg:leading-35 md:leading-25 leading-20 text-center mb-12">
+        <h1 className="text-black mb-12">
           KOMMENDE KONCERTER
         </h1>
         
