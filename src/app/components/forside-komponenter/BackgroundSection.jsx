@@ -16,6 +16,8 @@ export default function BackgroundSection() {
           src="/images/img-beach.webp"
           alt="Background"
           fill
+          sizes="100vw"
+          quality={60}
           className="object-cover"
         />
         {/* Mørk overlay */}

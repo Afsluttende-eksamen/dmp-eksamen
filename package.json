@@ -24,6 +24,9 @@
     "tailwind-merge": "^3.4.0",
     "zustand": "^5.0.9"
   },
+  "browserslist": [
+    "defaults and fully supports es6-module"
+  ],
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "tailwindcss": "^4",

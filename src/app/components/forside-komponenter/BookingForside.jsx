@@ -33,8 +33,10 @@ export default function BookingForside() {
         <Image
           src="/images/band-wagon.webp"
           alt="band-wagon"
-          width={800}
-          height={600}
+          width={570}
+          height={324}
+          sizes="(max-width: 768px) 100vw, 50vw"
+          quality={75}
           className="rounded-2xl"
         />
       </div>
