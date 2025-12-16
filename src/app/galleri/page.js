@@ -15,15 +15,13 @@ export default function Gallery() {
       <div className="mx-4 sm:mx-8 md:mx-20 py-16">
         <div className="text-center mb-12">
           <h1>GALLERI</h1>
-          <h2 className="text-black/80">Øjeblikke fra scenen og bag kulisserne</h2>
+          <h2 className="text-black/80 text-center">Følg med i hvad vi laver</h2>
         </div>
-
-     
           <h3 className="py-6 md:pt-16">Studio</h3>
         <MediaGrid>
           <MediaSlot size="large">
             <Image
-              src="/images/bornholm/bornholm-studio-5-h.webp"
+              src="/images/studio/bornholm-studio-w.webp"
               alt="Galleri billede"
               width={1600}
               height={900}
@@ -41,7 +39,37 @@ export default function Gallery() {
           </MediaSlot>
           <MediaSlot>
             <Image
-              src="/images/bornholm/bornholm-studio-2-h.webp"
+              src="/images/studio/bornholm-studio-2-h.webp"
+              alt="Galleri billede"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+        </MediaGrid>
+          <div className="my-6"></div>
+          <MediaGrid>
+          <MediaSlot>
+            <Image
+              src="/images/studio/bornholm-studio-3-h.webp"
+              alt="Galleri billede"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+          <MediaSlot size="large">
+            <Image
+              src="/images/studio/bornholm-studio-4-h.webp"
+              alt="Galleri billede"
+              width={1600}
+              height={900}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+          <MediaSlot>
+            <Image
+              src="/images/studio/bornholm-studio-h.webp"
               alt="Galleri billede"
               width={800}
               height={600}
@@ -52,7 +80,6 @@ export default function Gallery() {
 
         <h3 className="py-6 md:pt-16"> Sommeren '25 </h3>
 
-        {/* Sektion 2 - Stort billede til HØJRE */}
         <MediaGrid>
           <MediaSlot>
             <Image
@@ -82,14 +109,11 @@ export default function Gallery() {
             />
           </MediaSlot>
         </MediaGrid>
-
-         <h2 className="py-6 md:pt-16"> Live fra Tivoli</h2>
-
-          {/* Sektion 1 - Stort billede til VENSTRE */}
+           <div className="my-6"></div>
         <MediaGrid>
           <MediaSlot size="large">
             <Image
-              src="/images/img-1.webp"
+              src="/images/bornholm/bornholm-2-h.webp"
               alt="Galleri billede"
               width={1600}
               height={900}
@@ -98,7 +122,7 @@ export default function Gallery() {
           </MediaSlot>
           <MediaSlot>
             <Image
-              src="/images/img-2.webp"
+              src="/images/bornholm/bornholm-1-w.webp"
               alt="Galleri billede"
               width={800}
               height={600}
@@ -107,40 +131,7 @@ export default function Gallery() {
           </MediaSlot>
           <MediaSlot>
             <Image
-              src="/images/img-4.webp"
-              alt="Galleri billede"
-              width={800}
-              height={600}
-              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-            />
-          </MediaSlot>
-        </MediaGrid>
-
-        <h2 className="py-6 md:pt-16"> Live fra Tivoli</h2>
-
-        {/* Sektion 2 - Stort billede til HØJRE */}
-        <MediaGrid>
-          <MediaSlot>
-            <Image
-              src="/images/img-5.webp"
-              alt="Galleri billede"
-              width={800}
-              height={600}
-              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-            />
-          </MediaSlot>
-          <MediaSlot size="large">
-            <Image
-              src="/images/img-7.webp"
-              alt="Galleri billede"
-              width={1600}
-              height={900}
-              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-            />
-          </MediaSlot>
-          <MediaSlot>
-            <Image
-              src="/images/img-7.webp"
+              src="/images/bornholm/bornholm-3-w.webp"
               alt="Galleri billede"
               width={800}
               height={600}

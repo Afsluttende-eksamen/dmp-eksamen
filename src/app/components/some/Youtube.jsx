@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { FaYoutube } from "react-icons/fa";
 
 export default function YouTubeFeed({ videos }) {
   return (
@@ -8,9 +9,10 @@ export default function YouTubeFeed({ videos }) {
       <Link
         href="https://www.youtube.com/@DanserMedPiger"
         target="_blank"
-        className="hover:underline"
+        className="hover:underline flex items-center gap-2"
       >
-        <h3 className="ml-2"> YouTube</h3>
+        <FaYoutube className="w-12 h-12 pl-4  " />
+        <h3>YouTube</h3>
       </Link>
       <div className="flex overflow-x-auto gap-2.5 p-4 whitespace-nowrap scrollbar-hide">
         {videos.map((url, idx) => (

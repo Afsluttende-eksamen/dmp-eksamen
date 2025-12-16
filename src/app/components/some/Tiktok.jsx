@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import { useEffect } from "react";
+import { FaTiktok } from "react-icons/fa";
 
 export default function TikTokEmbed({ tiktokPosts }) {
   useEffect(() => {
@@ -20,9 +21,10 @@ export default function TikTokEmbed({ tiktokPosts }) {
       <Link
         href="https://www.tiktok.com/@dansermedpiger"
         target="_blank"
-        className="hover:underline"
+        className="hover:underline flex items-center gap-2"
       >
-        <h3 className="ml-2">TikTok</h3>
+        <FaTiktok className="w-12 h-12 pl-4" />
+        <h3>TikTok</h3>
       </Link>
       <Script src="https://www.tiktok.com/embed.js" strategy="lazyOnload" />
       <div className="flex overflow-x-scroll w-full gap-2.5 p-4 whitespace-nowrap scrollbar-hide h-145 overflow-y-hidden">

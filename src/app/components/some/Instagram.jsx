@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import { useEffect } from "react";
+import { FaInstagram } from "react-icons/fa";
 
 export default function Instagram({ posts }) {
   useEffect(() => {
@@ -15,9 +16,10 @@ export default function Instagram({ posts }) {
         <Link
           href="https://www.instagram.com/dansermedpiger/"
           target="_blank"
-          className="hover:underline"
+          className="hover:underline flex items-center gap-3"
         >
-          <h3 className="ml-2">Instagram</h3>
+          <FaInstagram className="w-12 h-12" />
+          <h3>Instagram</h3>
         </Link>
         <div className="overflow-y-hidden w-full overflow-x-auto whitespace-nowrap scrollbar-hide flex gap-2.5 h-[40dvh] md:h-[45dvh] lg:h-[47dvh] pb-4">
           <Script

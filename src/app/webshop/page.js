@@ -7,7 +7,6 @@ export default async function Webshop() {
 
   return (
     <div className=" bg-white">
-      <Navigation />
       <div className="mx-8 py-16">
         <h1>MERCH</h1>
 
