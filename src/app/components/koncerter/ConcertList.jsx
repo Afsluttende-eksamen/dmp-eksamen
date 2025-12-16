@@ -3,7 +3,7 @@ import ConcertCard from "./ConcertCard";
 export default function ConcertList({ concerts }) {
   return (
     <section className="w-auto px-4 ">
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 ">
+      <div className="flex flex-col gap-8 p-6 rounded-2xl">
         {concerts.map((concert, index) => (
           <ConcertCard
             key={index}

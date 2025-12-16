@@ -2,55 +2,16 @@ import Image from "next/image";
 import Footer from "../components/layout/Footer";
 import ConcertList from "../components/koncerter/ConcertList";
 import Navigation from "../components/layout/Navigation";
+import { concerts } from "@/lib/data/concerts";
 
 export default function Concerts() {
-  const concerts = [
-    {
-      date: "7. JUNI",
-      venue: "MUSIK I ØSTERSKOVEN",
-      city: "HOBRO",
-      ticketLink: "#"
-    },
-    {
-      date: "14. JUNI",
-      venue: "VEGA",
-      city: "KØBENHAVN",
-      ticketLink: "#"
-    },
-    {
-      date: "21. JUNI",
-      venue: "TRAIN",
-      city: "AARHUS",
-      ticketLink: "#"
-    },
-    {
-      date: "28. JUNI",
-      venue: "STUDENTERHUSET",
-      city: "AALBORG",
-      ticketLink: "#"
-    },
-    {
-      date: "5. JULI",
-      venue: "GIMLE",
-      city: "ROSKILDE",
-      ticketLink: "#"
-    },
-    {
-      date: "12. JULI",
-      venue: "ATLAS",
-      city: "AARHUS",
-      ticketLink: "#"
-    }
-  ];
-
   return (
-    <div className="relative h-screen">
+    <div className="relative min-h-screen">
       <div className="fixed inset-0 z-0">
         <Image
           src="/images/koncerter-bg.jpg"
           alt="Concert crowd"
-          width={1920}
-          height={1080}
+          fill
           className="object-cover"
         />
    
@@ -74,10 +35,7 @@ export default function Concerts() {
         </div>
       </section>
 
-
-      <div className="relative z-10">
-        <Footer />
-      </div>
+     
     </div>
   );
 }

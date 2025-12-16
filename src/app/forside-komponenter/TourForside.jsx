@@ -3,11 +3,14 @@ import Image from "next/image";
 import Button from "../components/ui/Button";
 import ListItem from "./ListItem";
 import Link from "next/link";
+import { concerts } from "@/lib/data/concerts";
 
 export default function TourForside() {
+  const upcomingConcerts = concerts.slice(0, 4);
+
   return (
-    <section className=" bg-black grid md:grid-cols-2 gap-1 py-20 px-0 md:px-8">
-      <div className="flex justify-center items-center p-8 ">
+    <section className="bg-black grid md:grid-cols-2 gap-1 py-20 px-0 md:px-8">
+      <div className="flex justify-center items-center p-8">
         <Image
           src="/images/img-beach.jpg"
           alt="img-beach"
@@ -22,25 +25,17 @@ export default function TourForside() {
             TOURPLAN 2025
           </h2>
           <div className="flex flex-col gap-6 mb-12">
-            <ListItem
-              venue="VEGA"
-              location="København"
-              date="15. MAR"
-            />
-            <ListItem venue="TRAIN" location="Aarhus" date="22. MAR" />
-            <ListItem
-              venue="TIVOLI"
-              location="København"
-              date="29. MAR"
-            />
-            <ListItem
-              venue="STUDENTERHUSET"
-              location="Aalborg"
-              date="29. MAR"
-            />
+            {upcomingConcerts.map((concert, i) => (
+              <ListItem
+                key={i}
+                venue={concert.venue}
+                location={concert.city}
+                date={concert.date}
+              />
+            ))}
           </div>
           <div className="flex justify-center md:justify-start">
-            <Link href="/concerts">
+            <Link href="/koncerter">
               <Button variant="primary">ALLE KONCERTER</Button>
             </Link>
           </div>
