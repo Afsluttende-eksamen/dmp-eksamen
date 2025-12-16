@@ -1,12 +1,8 @@
 'use client';
-
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import Button from './Button';
 import ListItem from './ListItem';
-import Link from 'next/link';
+
 
 
 
@@ -25,7 +21,7 @@ export default function TourForside() {
         />
       </div>
       <div className="  flex items-center justify-center md:justify-end text-white px-4 md:px-8">
-        <div className="w-full max-w-2xl  py-16">
+        <div className="w-full max-w-2xl py-8 md:py-16">
           <h2 className="mb-8 md:mb-12 md:text-left text-center">
             TOURPLAN 2025
           </h2>

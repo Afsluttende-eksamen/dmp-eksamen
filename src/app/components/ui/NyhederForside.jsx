@@ -33,8 +33,8 @@ export default function NyhederForside() {
   }, []);
 
   return (
-    <section className="pb-8">
-      <div className="px-8 mb-2">
+    <section className="py-16">
+      <div className="px-8 mb-8">
         <h1>SENESTE NYT</h1>
       </div>
 
