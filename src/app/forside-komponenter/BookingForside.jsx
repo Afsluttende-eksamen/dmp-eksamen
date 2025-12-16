@@ -6,7 +6,7 @@ import BookingItem from './BookingItem';
 
 export default function BookingForside() {
   return (
-    <section className="bg-white grid md:grid-cols-2 gap-1 py-20">
+    <section className="bg-white grid md:grid-cols-2 gap-1 py-20 px-0 md:px-8">
       <div className="flex items-center justify-center md:justify-start px-4 md:px-8">
         <div className="py-0 md:py-16">
           <h2 className="mb-8 md:mb-12 md:text-left text-center">
