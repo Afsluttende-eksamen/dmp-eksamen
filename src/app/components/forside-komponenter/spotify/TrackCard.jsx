@@ -15,8 +15,8 @@ export default function TrackCard({ track }) {
       <Image
         src={track.album.images[0].url}
         alt={track.name}
-        width={300}
-        height={300}
+        width={track.album.images[0].width}
+        height={track.album.images[0].height}
         sizes="(max-width: 768px) 150px, 300px"
         className="w-100 h-100 rounded-xl object-cover"
       />

@@ -20,12 +20,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="da">
       <body
         className={`${archivo.variable} ${newsreader.variable} antialiased`}
       >
         <NavigationWrapper />
-        {children}
+        <main>
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
