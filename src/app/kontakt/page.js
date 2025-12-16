@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navigation from "../components/layout/Navigation.jsx";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
+import Button from "../components/ui/Button.jsx";
 
 export default function Kontakt() {
   return (
@@ -15,7 +16,7 @@ export default function Kontakt() {
             alt="Billede af Danser Med Piger"
             width={600}
             height={1200}
-            className="rounded-3xl mx-auto  w-full h-auto hidden md:block"
+            className=" rounded-3xl mx-auto w-full h-auto hidden md:block"
           />
         </div>
 
@@ -67,6 +68,14 @@ export default function Kontakt() {
               +45 33 97 90 10
             </Link>
           </div>
+          <Button
+            variant="primary"
+            className="w-fit"
+            href="https://unitedstage.dk/artister/danser-med-piger/"
+            target="_blank"
+          >
+            Gå til United Stage
+          </Button>
           <br />
           <h2>Kontakt os</h2>
           <div>
