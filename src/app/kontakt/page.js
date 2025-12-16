@@ -74,7 +74,7 @@ export default function Kontakt() {
             href="https://unitedstage.dk/artister/danser-med-piger/"
             target="_blank"
           >
-            Gå til United Stage
+            GÅ TIL UNITED STAGE
           </Button>
           <br />
           <h2>Kontakt os</h2>
