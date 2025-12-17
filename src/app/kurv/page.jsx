@@ -31,7 +31,7 @@ const Cart = () => {
   };
 
   return (
-    <div>
+    <div className="px-10">
       <h1 className="place-self-center">KURV</h1>
       <div className="max-w-4xl mx-auto mb-10">
         {cart.length === 0 ? (
@@ -62,7 +62,7 @@ const Cart = () => {
                         alt={product.description}
                         width={350}
                         height={350}
-                        className="object-cover rounded-xl my-4 w-35 "
+                        className="object-cover rounded-xl pr-1 my-4 min-h-[65px] md:w-35 "
                       />
                     </Link>
 

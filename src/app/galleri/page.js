@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Navigation from "../components/layout/Navigation";
-import Footer from "../components/layout/Footer";
 import MediaGrid from "../components/media/MediaGrid";
 import MediaSlot from "../components/media/MediaSlot";
 

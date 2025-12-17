@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import Navigation from "../components/layout/Navigation.jsx";
 import { FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 import Button from "../components/ui/Button.jsx";
 
