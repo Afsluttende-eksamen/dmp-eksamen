@@ -115,7 +115,7 @@ export default function Gallery() {
           </MediaSlot>
           <MediaSlot>
             <Image
-              src="/images/img-2.webp"
+              src="/images/studio/img-2.webp"
               alt="Galleri billede"
               width={800}
               height={600}
