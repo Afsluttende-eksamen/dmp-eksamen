@@ -1,29 +1,27 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import Button from '../ui/Button';
-import MediaGrid from '../media/MediaGrid';
-import MediaSlot from '../media/MediaSlot';
+import Image from "next/image";
+import Link from "next/link";
+import Button from "../ui/Button";
+import MediaGrid from "../media/MediaGrid";
+import MediaSlot from "../media/MediaSlot";
 
 export default function BentoSektion() {
   const images = [
-    '/images/live/live-1.webp',
-    '/images/live/live-2.webp',
-    '/images/live/live-4.webp',
-    '/images/live/live-5.webp',
-    '/images/live/live-9.webp',
+    "/images/live/live-1.webp",
+    "/images/live/live-2.webp",
+    "/images/live/live-4.webp",
+    "/images/live/live-5.webp",
+    "/images/live/live-9.webp",
   ];
 
-  const videos = [
-    '/videos/video-galleri.mp4'
-  ];
+  const videos = ["/videos/video-galleri.mp4"];
 
   return (
     <section className="bg-white mx-4 sm:mx-8 md:mx-20 py-16">
       <div className="px-4 md:px-8">
-
         <div className="flex flex-col justify-center text-center mb-12">
-          {/* <h1>GALLERI</h1> */}
-           <h2 className="text-black/80 text-center">Følg med i hvad vi laver</h2>
+          <h2 className="text-black/80 text-center">
+            Følg med i hvad vi laver
+          </h2>
         </div>
 
         <MediaGrid>
@@ -53,7 +51,8 @@ export default function BentoSektion() {
           <MediaSlot>
             <div className="flex flex-col bg-black justify-between p-4 md:p-6 h-full rounded-3xl">
               <h4 className="text-lg sm:text-xl md:text-4xl lg:text-6xl mb-4 md:mb-12 text-white">
-                Udforsk hele vores galleri med billeder fra shows, backstage og meget mere.
+                Udforsk hele vores galleri med billeder fra shows, backstage og
+                meget mere.
               </h4>
               <Link href="/galleri">
                 <Button variant="primary">TIL GALLERIET</Button>
