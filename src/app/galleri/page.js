@@ -170,36 +170,7 @@ export default function Gallery() {
 
         <h3 className="py-6 md:pt-16"> Sommeren '25 </h3>
 
-        <MediaGrid>
-          <MediaSlot>
-            <Image
-              src="/images/img-6.webp"
-              alt="Galleri billede"
-              width={800}
-              height={600}
-              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-            />
-          </MediaSlot>
-          <MediaSlot size="large">
-            <Image
-              src="/images/bornholm/bornholm-4-w.webp"
-              alt="Galleri billede"
-              width={1600}
-              height={900}
-              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-            />
-          </MediaSlot>
-          <MediaSlot>
-            <Image
-              src="/images/img-7.webp"
-              alt="Galleri billede"
-              width={800}
-              height={600}
-              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-            />
-          </MediaSlot>
-        </MediaGrid>
-           <div className="my-6"></div>
+
         <MediaGrid>
           <MediaSlot size="large">
             <Image
@@ -229,7 +200,37 @@ export default function Gallery() {
             />
           </MediaSlot>
         </MediaGrid>
-
+          <div className="my-6"></div>
+        <MediaGrid>
+          <MediaSlot>
+            <Image
+              src="/images/img-6.webp"
+              alt="Galleri billede"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+          <MediaSlot size="large">
+            <Image
+              src="/images/bornholm/bornholm-4-w.webp"
+              alt="Galleri billede"
+              width={1600}
+              height={900}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+          <MediaSlot>
+            <Image
+              src="/images/img-7.webp"
+              alt="Galleri billede"
+              width={800}
+              height={600}
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+            />
+          </MediaSlot>
+        </MediaGrid>
+       
      
       </div>
     </div>

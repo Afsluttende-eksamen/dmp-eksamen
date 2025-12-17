@@ -26,7 +26,7 @@ export default function SpotifyArtistSection({
       </div>
 
       <div>
-          <div className="flex h-100 md:h-115 items-top overflow-x-auto gap-2.5 whitespace-nowrap scrollbar-hide">
+          <div className="flex h-100 md:h-115 items-center overflow-x-auto gap-2.5 whitespace-nowrap scrollbar-hide">
             {tracks.map((track) => (
               <TrackCard key={track.id} track={track} />
             ))}

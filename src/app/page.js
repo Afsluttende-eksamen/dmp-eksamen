@@ -31,9 +31,9 @@ export default function Home() {
       </section>
       <NyhederForside />
       <BackgroundSection />
-      <Booking />
-      <SpotifyArtistSection artistId={featuredArtistId} />
       <BentoSektion />
+      <SpotifyArtistSection artistId={featuredArtistId} />
+      <Booking />
     </main>
   );
 }
