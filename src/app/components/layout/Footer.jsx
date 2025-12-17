@@ -34,11 +34,11 @@ const Footer = () => {
             <Link className="hover:underline" href="/merch">
               Merch
             </Link>
-            <Link className="hover:underline" href="/concerts">
+            <Link className="hover:underline" href="/koncerter">
               Koncerter
             </Link>
-            <Link className="hover:underline" href="/follow-us">
-              Følg os
+            <Link className="hover:underline" href="/om-os">
+              Om os
             </Link>
           </div>
 

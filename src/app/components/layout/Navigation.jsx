@@ -34,7 +34,7 @@ const Navigation = ({ variant = "black" }) => {
       <div className="">
         <div className="flex items-center justify-between lg:justify-evenly ">
           <div className="hidden lg:flex gap-[3dvw]">
-            <Link href="/webshop" className={linkClass}>
+            <Link href="/merch" className={linkClass}>
               MERCH
             </Link>
             <Link href="/koncerter" className={linkClass}>
@@ -92,11 +92,7 @@ const Navigation = ({ variant = "black" }) => {
 
         {isOpen && (
           <div className={burgerClass}>
-            <Link
-              href="/webshop"
-              className={linkClass}
-              onClick={handleLinkClick}
-            >
+            <Link href="/merch" className={linkClass} onClick={handleLinkClick}>
               MERCH
             </Link>
             <Link

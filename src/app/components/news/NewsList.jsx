@@ -13,7 +13,7 @@ export default function NewsList({ posts = [], categories = [] }) {
       : posts.filter((post) => post.category === activeCategory);
 
   return (
-    <div className="px-8 py-16">
+    <div className="px-8 pb-16">
       <h1 className="text-6xl md:text-7xl font-black mb-12">NYHEDER</h1>
 
       <div className="flex gap-3 mb-12">

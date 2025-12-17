@@ -16,6 +16,10 @@ const newsreader = Newsreader({
 export const metadata = {
   title: "Danser Med Piger",
   description: "Officielle hjemmeside for Danser Med Piger",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -25,9 +29,7 @@ export default function RootLayout({ children }) {
         className={`${archivo.variable} ${newsreader.variable} antialiased`}
       >
         <NavigationWrapper />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

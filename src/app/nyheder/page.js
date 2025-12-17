@@ -1,6 +1,5 @@
 import NewsList from "../components/news/NewsList";
-import Navigation from "../components/layout/Navigation";
-import Footer from "../components/layout/Footer";
+
 import { getNews } from "@/lib/api/news";
 
 export default async function News() {
@@ -16,7 +15,6 @@ export default async function News() {
 
   return (
     <div>
-   
       <NewsList posts={post} categories={categories} />
     </div>
   );

@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import Navigation from "../../components/layout/Navigation";
 import AddToCartButton from "@/app/components/webshop/AddToCartButton";
 import { getProductBySlug } from "@/lib/api/products";
-import Button from "@/app/components/ui/Button";
+
 import { useCartStore } from "@/store/cartStore";
 
 export default async function ProductPage({ params }) {
@@ -13,7 +12,6 @@ export default async function ProductPage({ params }) {
 
   return (
     <div className="  bg-white">
-      <Navigation />
       <div className="my-20 mx-8">
         <Link href="/webshop" className="text-sm hover:underline">
           ← Tilbage til merch

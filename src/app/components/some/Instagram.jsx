@@ -21,7 +21,7 @@ export default function Instagram({ posts }) {
           <FaInstagram className="w-12 h-12" />
           <h3>Instagram</h3>
         </Link>
-        <div className="overflow-y-hidden w-full overflow-x-auto whitespace-nowrap scrollbar-hide flex gap-2.5 h-[40dvh] md:h-[45dvh] lg:h-[47dvh] pb-4">
+        <div className="overflow-y-hidden w-full overflow-x-auto whitespace-nowrap scrollbar-hide flex gap-2.5 h-80 md:min-h-[350px] lg:min-h-[400px]  pb-4">
           <Script
             src="https://www.instagram.com/embed.js"
             strategy="lazyOnload"
@@ -31,7 +31,7 @@ export default function Instagram({ posts }) {
             <div className="contain-content rounded-2xl" key={url}>
               <blockquote
                 key={url}
-                className="relative overflow-hidden -top-15 instagram-media inline-block  mr-4 w-[30dvw] h-[50dvh] md:h-[55dvh] md:w-[40dvw]  lg:w-[25dvw] pb-20  rounded-2xl "
+                className="relative overflow-hidden -top-15 instagram-media inline-block  mr-4 w-[30dvw] h-[400px] md:h-[768px] md:w-[40dvw]  lg:w-[25dvw] pb-20  rounded-2xl "
                 data-instgrm-permalink={url}
                 data-instgrm-version="14"
                 style={{
