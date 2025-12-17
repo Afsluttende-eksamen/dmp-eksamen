@@ -7,12 +7,12 @@ export default async function Webshop() {
 
   return (
     <div className=" bg-white">
-      <div className="mx-8 py-16">
+      <div className="mx-8 ">
         <h1>MERCH</h1>
 
         <div className="flex flex-col md:flex-row justify-center md:justify-start gap-8">
           {products.map((product) => (
-            <ProductCard key={product.slug} product={product}  />
+            <ProductCard key={product.slug} product={product} />
           ))}
         </div>
       </div>

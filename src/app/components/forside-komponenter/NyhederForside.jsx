@@ -35,7 +35,7 @@ export default function NyhederForside() {
   }, []);
 
   return (
-    <section className="py-16">
+    <section>
       <div className="px-8 mb-4">
         <h1>SENESTE NYT</h1>
       </div>

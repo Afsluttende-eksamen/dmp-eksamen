@@ -7,9 +7,8 @@ import Button from "../components/ui/Button";
 export default function AboutPage() {
   return (
     <div>
-      <div className="pt-16">
-        <h1 className="leading-none mb-0 text-center ">OM OS </h1>
-      </div>
+      <h1 className="leading-none -mb-16 text-center ">OM OS </h1>
+
       <Image
         src="/images/img-omhero.webp"
         alt="Billede af Danser Med Piger"

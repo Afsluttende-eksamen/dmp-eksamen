@@ -1,6 +1,3 @@
-
-
-
 import Image from "next/image";
 import Navigation from "../components/layout/Navigation";
 import Footer from "../components/layout/Footer";
@@ -10,15 +7,13 @@ import MediaSlot from "../components/media/MediaSlot";
 export default function Gallery() {
   return (
     <div className="bg-white">
-
-      
-      <div className="mx-4 sm:mx-8 md:mx-20 py-16">
+      <div className="mx-4 sm:mx-8 md:mx-20 ">
         <div className="text-center mb-0">
           <h1>GALLERI</h1>
         </div>
 
-             <h3 className="py-6">Live</h3>
-       <MediaGrid>
+        <h3 className="py-6">Live</h3>
+        <MediaGrid>
           <MediaSlot>
             <Image
               src="/images/live/live-8.webp"
@@ -47,7 +42,7 @@ export default function Gallery() {
             />
           </MediaSlot>
         </MediaGrid>
-          <div className="my-6"></div>
+        <div className="my-6"></div>
         <MediaGrid>
           <MediaSlot size="large">
             <Image
@@ -77,8 +72,8 @@ export default function Gallery() {
             />
           </MediaSlot>
         </MediaGrid>
-          <div className="my-6"></div>
-          <MediaGrid>
+        <div className="my-6"></div>
+        <MediaGrid>
           <MediaSlot>
             <Image
               src="/images/live/live-5.webp"
@@ -107,7 +102,7 @@ export default function Gallery() {
             />
           </MediaSlot>
         </MediaGrid>
-          <h3 className="py-6 md:pt-16">Studio</h3>
+        <h3 className="py-6 md:pt-16">Studio</h3>
         <MediaGrid>
           <MediaSlot size="large">
             <Image
@@ -137,8 +132,8 @@ export default function Gallery() {
             />
           </MediaSlot>
         </MediaGrid>
-          <div className="my-6"></div>
-          <MediaGrid>
+        <div className="my-6"></div>
+        <MediaGrid>
           <MediaSlot>
             <Image
               src="/images/studio/bornholm-studio-3-h.webp"
@@ -170,7 +165,6 @@ export default function Gallery() {
 
         <h3 className="py-6 md:pt-16"> Sommeren '25 </h3>
 
-
         <MediaGrid>
           <MediaSlot size="large">
             <Image
@@ -200,7 +194,7 @@ export default function Gallery() {
             />
           </MediaSlot>
         </MediaGrid>
-          <div className="my-6"></div>
+        <div className="my-6"></div>
         <MediaGrid>
           <MediaSlot>
             <Image
@@ -230,8 +224,6 @@ export default function Gallery() {
             />
           </MediaSlot>
         </MediaGrid>
-       
-     
       </div>
     </div>
   );
