@@ -21,7 +21,7 @@ export default function Instagram({ posts }) {
           <FaInstagram className="w-12 h-12" />
           <h3>Instagram</h3>
         </Link>
-        <div className="overflow-y-hidden w-full overflow-x-auto whitespace-nowrap scrollbar-hide flex gap-2.5 h-80 md:h-[400px] lg:max-h-[400px] pb-4">
+        <div className="overflow-y-hidden w-full overflow-x-auto whitespace-nowrap scrollbar-hide flex gap-2.5 h-80 md:min-h-[350px] lg:min-h-[400px]  pb-4">
           <Script
             src="https://www.instagram.com/embed.js"
             strategy="lazyOnload"

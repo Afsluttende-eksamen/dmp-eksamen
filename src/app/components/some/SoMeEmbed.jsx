@@ -11,11 +11,9 @@ export default function SoMeEmbed() {
           "https://www.instagram.com/p/DRkHkAZjHap/",
           "https://www.instagram.com/p/DLe8aEqsvrL/",
           "https://www.instagram.com/p/DKulEPQiGq8/",
-          "https://www.instagram.com/p/DKKa3sfs4Or/",
           "https://www.instagram.com/p/DJ4MWJ-sJF8/",
           "https://www.instagram.com/p/DIv5cNrM7vU/",
         ]}
-        
       />
       <TikTokEmbed
         tiktokPosts={[
