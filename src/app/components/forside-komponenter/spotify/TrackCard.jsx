@@ -17,8 +17,7 @@ export default function TrackCard({ track }) {
         alt={track.name}
         width={track.album.images[0].width}
         height={track.album.images[0].height}
-        sizes="(max-width: 768px) 150px, 300px"
-        className="w-100 h-100 rounded-xl object-cover"
+        className="w-full aspect-square rounded-xl object-cover"
       />
       <SpotifyEmbed trackId={trackId} />
       <div className="flex gap-3">

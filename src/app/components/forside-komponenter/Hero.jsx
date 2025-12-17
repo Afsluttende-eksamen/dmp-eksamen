@@ -16,7 +16,6 @@ export default function Hero() {
           width={200}
           height={200}
           className="opacity-50"
-          priority
         />
       </div>
       <div>

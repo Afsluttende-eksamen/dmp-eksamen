@@ -30,7 +30,6 @@ export default function Home() {
         </div>
       </section>
       <NyhederForside />
-      {/* <TourForside /> */}
       <BackgroundSection />
       <Booking />
       <SpotifyArtistSection artistId={featuredArtistId} />

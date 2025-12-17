@@ -7,13 +7,13 @@ import Link from "next/link";
 
 export default function BookingForside() {
   return (
-    <section className="bg-white grid md:grid-cols-2 gap-1 py-20 px-0 md:px-8">
+    <section className="bg-white grid grid-cols-1 md:grid-cols-2 gap-1 py-20 px-0 md:px-8">
       <div className="flex items-center justify-center md:justify-start px-2 md:px-8">
-        <div className="py-0 md:py-16">
-          <h2 className="mb-8 md:mb-12 md:text-left text-center">
+        <div className="py-0 md:py-16 px-2">
+          <h2 className="mb-8 md:mb-2 md:text-left text-center">
             BOOK DANSER MED PIGER TIL
           </h2>
-          <div className="flex flex-col px-4 pt-4 gap-6 mb-8">
+          <div className="flex flex-col pt-4 gap-6 mb-8">
             <BookingItem number="1" text="Koncerter og festivaler" />
             <BookingItem number="2" text="Firmafester og events" />
             <BookingItem number="3" text="Private arrangementer" />
@@ -31,11 +31,10 @@ export default function BookingForside() {
       </div>
       <div className="flex justify-center items-center p-8">
         <Image
-          src="/images/band-wagon.webp"
+          src="/images/dmp-tour-wagon.webp"
           alt="band-wagon"
           width={570}
           height={324}
-          sizes="(max-width: 768px) 100vw, 50vw"
           quality={75}
           className="rounded-2xl"
         />
