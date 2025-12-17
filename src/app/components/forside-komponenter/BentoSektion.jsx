@@ -6,11 +6,11 @@ import MediaSlot from '../media/MediaSlot';
 
 export default function BentoSektion() {
   const images = [
-    '/images/img-1.webp',
-    '/images/img-2.webp',
-    '/images/img-4.webp',
-    '/images/img-5.webp',
-    '/images/img-9.webp',
+    '/images/live/live-1.webp',
+    '/images/live/live-2.webp',
+    '/images/live/live-4.webp',
+    '/images/live/live-5.webp',
+    '/images/live/live-9.webp',
   ];
 
   const videos = [
@@ -29,7 +29,13 @@ export default function BentoSektion() {
         <MediaGrid>
           {/* Video */}
           <MediaSlot size="large">
-            <video src={videos[0]} controls className="w-full h-full min-h-[200px] object-cover rounded-3xl" />
+            <iframe
+              src="https://www.youtube.com/embed/sVfK_ovlBa8"
+              title="Danser Med Piger video"
+              allow="accelerometer; autoplay; clipboard-write;  picture-in-picture"
+              allowFullScreen
+              className="w-full h-full min-h-[200px] rounded-3xl"
+            />
           </MediaSlot>
 
           {/* Billede */}
