@@ -48,7 +48,7 @@ export default function NyhederForside() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {posts.map((post, i) => (
-              <Link key={i} href="/news" className="block">
+              <Link key={i} href="/nyheder" className="block">
                 <NewsCard post={post} />
               </Link>
             ))}
@@ -56,7 +56,7 @@ export default function NyhederForside() {
         )}
 
         <div className="flex items-center justify-center mt-8">
-          <Link href="/news">
+          <Link href="/nyheder">
             <Button variant="primary">ALLE NYHEDER</Button>
           </Link>
         </div>

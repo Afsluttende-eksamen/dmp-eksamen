@@ -4,7 +4,7 @@ import BentoSektion from "./components/forside-komponenter/BentoSektion";
 import NyhederForside from "./components/forside-komponenter/NyhederForside";
 import Booking from "./components/forside-komponenter/BookingForside";
 import SpotifyArtistSection from "./components/forside-komponenter/spotify/SpotifyArtistSection";
-import TourForside from "./components/forside-komponenter/TourForside";
+
 import BackgroundSection from "./components/forside-komponenter/BackgroundSection";
 
 export default function Home() {

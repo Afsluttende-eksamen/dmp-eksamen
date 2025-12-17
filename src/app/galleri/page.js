@@ -7,7 +7,7 @@ import MediaSlot from "../components/media/MediaSlot";
 export default function Gallery() {
   return (
     <div className="bg-white">
-      <div className="mx-4 sm:mx-8 md:mx-20 ">
+      <div className="mx-4 sm:mx-8 md:mx-20 pb-16">
         <div className="text-center mb-0">
           <h1>GALLERI</h1>
         </div>
