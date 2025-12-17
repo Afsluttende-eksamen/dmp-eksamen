@@ -31,7 +31,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="px-10">
+    <div className="px-8">
       <h1 className="place-self-center">KURV</h1>
       <div className="max-w-4xl mx-auto mb-10">
         {cart.length === 0 ? (
