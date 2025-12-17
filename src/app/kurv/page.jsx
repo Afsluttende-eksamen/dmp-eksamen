@@ -1,11 +1,9 @@
 "use client";
-import Navigation from "../components/layout/Navigation";
+
 import Link from "next/link";
 import { useCartStore } from "@/store/cartStore";
 import { useState } from "react";
 import Image from "next/image";
-import { IoCloseOutline } from "react-icons/io5";
-import Button from "../components/ui/Button";
 
 const Cart = () => {
   const cart = useCartStore((state) => state.cart);
